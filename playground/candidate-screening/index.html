@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier | Candidate Screening</title>
+  <meta name="description" content="Candidate Screening — a recruiter dashboard designed for the UI/UX Design Intern assignment at Nuvama Wealth. Helping hiring teams review hundreds of candidates faster without losing portfolio context." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/playground/candidate-screening" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Warrier | Candidate Screening" />
+  <meta property="og:description" content="Candidate Screening — a recruiter dashboard designed for the UI/UX Design Intern assignment at Nuvama Wealth. Helping hiring teams review hundreds of candidates faster without losing portfolio context." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://warrierayush.me/playground/candidate-screening" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier | Candidate Screening" />
+  <meta name="twitter:description" content="Candidate Screening — a recruiter dashboard designed for the UI/UX Design Intern assignment at Nuvama Wealth. Helping hiring teams review hundreds of candidates faster without losing portfolio context." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="../assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="../../site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <!-- Portfolio shell type — Inter + Fraunces, same as every other
+       Playground page. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/nav.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/project-shell.css" />
+  <link rel="stylesheet" href="css/candidate-screening.css" />
+
+  <!--
+    CANDIDATE SCREENING — a Playground project: the design
+    assignment for the UI/UX Design Intern role at Nuvama Wealth.
+    Unlike Nerve, this reads as a miniature product case study
+    rather than an assignment walkthrough — the hero opens
+    straight into the dashboard itself, and each argument is put
+    next to the export that proves it.
+
+    Six chapters: the brief (summarised, never reproduced), the
+    two decisions that shaped the interface, wireframe against
+    high fidelity, the side panel broken down in the order a
+    recruiter needs it, an honest note on where AI was used, and
+    the open ends.
+
+    Every image is a real Figma export from the assignment.
+    Nothing is recreated, generated or decorated. Same principle
+    as the rest of the portfolio: less reading, more
+    understanding — evidence over claims.
+  -->
+</head>
+
+<body class="pg-project pg-project--cs">
+  <a class="skip-link" href="#cs-hero">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="/#work">Work</a></li>
+          <li><a class="nav__link" href="/#about">About</a></li>
+          <li><a class="nav__link nav__link--alt" href="/playground">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="proj-hero" id="cs-hero" aria-labelledby="cs-hero-title">
+      <div class="container">
+        <div class="proj-hero__masthead">
+          <p class="proj-hero__eyebrow">Design Assignment</p>
+          <h1 class="proj-hero__title" id="cs-hero-title">Candidate Screening</h1>
+          <p class="proj-hero__oneline">
+            A recruiter dashboard designed for the UI/UX Design Intern
+            assignment at Nuvama Wealth. The challenge was to help hiring
+            teams review hundreds of candidates faster without losing
+            important portfolio context.
+          </p>
+          <ul class="tag-list proj-hero__tags">
+            <li class="tag">Design Assignment</li>
+            <li class="tag">Product Design</li>
+            <li class="tag">Dashboard</li>
+            <li class="tag">Recruitment</li>
+            <li class="tag">B2B SaaS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ THUMBNAIL — the product, immediately and large ═══ -->
+    <section class="cs-thumb" aria-label="The Candidate Screening dashboard">
+      <div class="container">
+        <figure class="cs-thumb__stage">
+          <img
+            src="assets/Thumbnail.png"
+            alt="The Candidate Screening dashboard — a Hiring Console sidebar, a header reading 'Candidate Screening · Product Designer · Design Hiring Team' with counts for total candidates, under review and shortlisted, a search field above Experience, Location, Industry, Skills, Status and Seniority filters, and below them a list of structured candidate rows, each showing a match strength, years of experience, skill tags, a work sample and a Shortlist action"
+            width="3004"
+            height="2034"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ 01 · THE ASSIGNMENT ═══ -->
+    <section class="chapter" id="assignment" aria-labelledby="assignment-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">01</span>
+          <span class="chapter__eyebrow">The Assignment</span>
+          <h2 class="chapter__title" id="assignment-title">What the brief asked for</h2>
+        </header>
+
+        <div class="cs-brief">
+          <div class="cs-brief__block">
+            <span class="cs-brief__label">Background</span>
+            <span class="cs-brief__rule" aria-hidden="true"></span>
+            <p class="cs-brief__text">
+              The design team is hiring and has hundreds of designer
+              applications to get through. Each one arrives as a resume, a
+              portfolio link and a scatter of experience markers. They needed
+              one central dashboard to filter, sort and shortlist against
+              several criteria at once.
+            </p>
+          </div>
+
+          <div class="cs-brief__block">
+            <span class="cs-brief__label">Problems to solve</span>
+            <span class="cs-brief__rule" aria-hidden="true"></span>
+            <ol class="cs-problems">
+              <li>
+                <h3 class="cs-problems__title"><span class="cs-problems__num">01</span>Overloaded profiles</h3>
+                <p class="cs-problems__text">Too much unstructured information to find the qualifications that matter.</p>
+              </li>
+              <li>
+                <h3 class="cs-problems__title"><span class="cs-problems__num">02</span>Inconsistent skills</h3>
+                <p class="cs-problems__text">Every resume words the same skill differently, so nothing compares.</p>
+              </li>
+              <li>
+                <h3 class="cs-problems__title"><span class="cs-problems__num">03</span>No portfolio context</h3>
+                <p class="cs-problems__text">Projects rarely say what the candidate actually did, so screeners guess.</p>
+              </li>
+              <li>
+                <h3 class="cs-problems__title"><span class="cs-problems__num">04</span>Buried experience</h3>
+                <p class="cs-problems__text">Domain experience like design systems or fintech means digging through resumes.</p>
+              </li>
+              <li>
+                <h3 class="cs-problems__title"><span class="cs-problems__num">05</span>Invisible visual quality</h3>
+                <p class="cs-problems__text">No design samples in the profile, so judging craft takes extra steps.</p>
+              </li>
+              <li>
+                <h3 class="cs-problems__title"><span class="cs-problems__num">06</span>No cue for fit</h3>
+                <p class="cs-problems__text">Nothing shows how closely a candidate matches the role criteria.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="cs-brief__block">
+            <span class="cs-brief__label cs-brief__label--accent">The goal</span>
+            <span class="cs-brief__rule" aria-hidden="true"></span>
+            <p class="cs-brief__goal">
+              Design a dashboard UI that lets the design team solve all six.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · THE THINKING ═══ -->
+    <section class="chapter" id="thinking" aria-labelledby="thinking-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">02</span>
+          <span class="chapter__eyebrow">Approach</span>
+          <h2 class="chapter__title" id="thinking-title">Designing for how recruiters actually review candidates</h2>
+        </header>
+
+        <!-- Compare first. Read later. -->
+        <div class="cs-row cs-row--wide-visual">
+          <div>
+            <h3 class="cs-row__title">Compare first. Read later.</h3>
+            <div class="cs-row__text">
+              <p>
+                Recruiters rarely evaluate one person in isolation. They
+                compare multiple applicants quickly, looking for patterns
+                before reading details.
+              </p>
+              <p>
+                Traditional cards waste space, while spreadsheets remove
+                portfolio context.
+              </p>
+              <p>
+                I designed a structured list that combines the speed of a
+                table with enough visual information to judge design
+                experience, skills and real work at a glance.
+              </p>
+            </div>
+          </div>
+
+          <figure class="cs-figure">
+            <figcaption class="cs-cap">Candidate row</figcaption>
+            <span class="cs-shot">
+              <img
+                src="assets/Candidate%20Card.png"
+                alt="One candidate row from the list, read left to right — initials and a three-dot 'Strong Match' indicator beside the name and current title, then years of experience, seniority, location and notice period, then core and supporting skill tags with industry labels, then a work sample thumbnail with its outcome, and finally the review status and a Shortlist action"
+                width="2232"
+                height="280"
+                loading="lazy"
+              />
+            </span>
+          </figure>
+        </div>
+
+        <!-- Keep recruiters in context. -->
+        <div class="cs-row">
+          <div>
+            <h3 class="cs-row__title">Keep recruiters in context.</h3>
+            <div class="cs-row__text">
+              <p>
+                Opening a separate profile for every candidate breaks flow
+                and resets scroll position.
+              </p>
+              <p>
+                Instead, I designed a side panel that lets recruiters inspect
+                one candidate while keeping the list visible underneath.
+              </p>
+              <p>
+                Closing one profile and opening the next becomes almost
+                effortless.
+              </p>
+            </div>
+          </div>
+
+          <figure class="cs-figure">
+            <figcaption class="cs-cap">Side panel, open over the list</figcaption>
+            <span class="cs-shot">
+              <img
+                src="assets/Dashboard%20High%20Fidelity%20-%20Side%20Panel.png"
+                alt="The dashboard with a candidate's side panel open on the right — the panel shows '1 of 6' with up and down arrows and a Close control, while the candidate list stays visible and in place behind it"
+                width="2880"
+                height="2048"
+                loading="lazy"
+              />
+            </span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · STRUCTURE TO INTERFACE ═══ -->
+    <section class="chapter" id="structure" aria-labelledby="structure-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">03</span>
+          <span class="chapter__eyebrow">Process</span>
+          <h2 class="chapter__title" id="structure-title">From Structure to Interface</h2>
+        </header>
+
+        <div class="cs-compare">
+          <figure class="cs-figure">
+            <figcaption class="cs-cap">Wireframe</figcaption>
+            <span class="cs-shot">
+              <img
+                src="assets/Dashboard%20Wireframe.png"
+                alt="The dashboard wireframe — a grey block layout: sidebar with navigation items, a 'Recruiter View' header with three stat blocks, a search bar with filter pills, and a stack of full-width candidate rows below"
+                width="2880"
+                height="2048"
+                loading="lazy"
+              />
+            </span>
+          </figure>
+          <figure class="cs-figure">
+            <figcaption class="cs-cap">High fidelity</figcaption>
+            <span class="cs-shot">
+              <img
+                src="assets/Dashboard%20High%20Fidelity.png"
+                alt="The same dashboard in high fidelity — the identical layout resolved into real type, real candidate data, match indicators, skill tags, work samples and Shortlist actions"
+                width="2880"
+                height="2048"
+                loading="lazy"
+              />
+            </span>
+          </figure>
+        </div>
+
+        <p class="cs-compare__note">
+          The information hierarchy was settled in wireframes first — what a
+          recruiter needs, and in what order. Only once that held did
+          typography, spacing and interaction details get refined.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · THE SIDE PANEL ═══ -->
+    <section class="chapter" id="panel" aria-labelledby="panel-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">04</span>
+          <span class="chapter__eyebrow">Side Panel</span>
+          <h2 class="chapter__title" id="panel-title">Information follows the recruiter's decision process</h2>
+        </header>
+
+        <div class="cs-anatomy">
+          <figure class="cs-figure cs-anatomy__visual">
+            <figcaption class="cs-cap">The full panel</figcaption>
+            <span class="cs-shot">
+              <img
+                src="assets/Side%20Panel.png"
+                alt="The full candidate side panel, top to bottom — a header with the candidate's name, match strength and Shortlist, Hold and Reject actions; a quick summary with strengths beside watch-outs; featured products with their outcomes; skills split into core and supporting across design, tools and industry; a short experience timeline; a resume block with auto-extracted highlights; and contact details with internal recruiter notes"
+                width="1140"
+                height="3486"
+                loading="lazy"
+              />
+            </span>
+          </figure>
+
+          <ol class="cs-anatomy__list">
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Header</h3>
+                <p class="cs-anatomy__text">
+                  Name, match strength, seniority and location — with
+                  Shortlist, Hold and Reject already in reach. The decision
+                  never waits for a scroll.
+                </p>
+              </div>
+            </li>
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Quick Summary</h3>
+                <p class="cs-anatomy__text">
+                  One honest sentence, then strengths set against watch-outs.
+                  The recruiter gets the verdict before the evidence.
+                </p>
+              </div>
+            </li>
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Featured Projects</h3>
+                <p class="cs-anatomy__text">
+                  Real work with the outcome attached, and the candidate's
+                  actual role named — so contribution is read, not guessed.
+                </p>
+              </div>
+            </li>
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Skills</h3>
+                <p class="cs-anatomy__text">
+                  Core separated from supporting, in one shared vocabulary
+                  across design, tools and industry. This is what makes two
+                  candidates comparable.
+                </p>
+              </div>
+            </li>
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Experience</h3>
+                <p class="cs-anatomy__text">
+                  A short timeline — role, dates, duration. Enough to see a
+                  trajectory, not a second resume.
+                </p>
+              </div>
+            </li>
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Resume</h3>
+                <p class="cs-anatomy__text">
+                  Auto-extracted highlights sit above the document, so the
+                  full PDF is opened by choice rather than by default.
+                </p>
+              </div>
+            </li>
+            <li class="cs-anatomy__item">
+              <div>
+                <h3 class="cs-anatomy__title">Contact &amp; Notes</h3>
+                <p class="cs-anatomy__text">
+                  Email, portfolio and links last — next to internal notes,
+                  which turn one person's screening into a team decision.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 05 · AI IN THE PROCESS ═══ -->
+    <section class="chapter" id="ai" aria-labelledby="ai-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">05</span>
+          <span class="chapter__eyebrow">Tooling</span>
+          <h2 class="chapter__title" id="ai-title">AI in the Design Process</h2>
+        </header>
+
+        <div class="cs-prose">
+          <p>
+            ChatGPT was used as a thinking partner throughout the assignment.
+          </p>
+          <p>
+            It helped challenge assumptions, discuss recruiter workflows,
+            explore trade-offs and validate reasoning — the kind of back and
+            forth I'd otherwise have with a colleague.
+          </p>
+          <p>
+            <b>The interface, wireframes, interaction patterns and final
+            decisions were designed manually in Figma.</b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 06 · WHAT'S NEXT ═══ -->
+    <section class="chapter chapter--tight" id="next" aria-labelledby="next-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">06</span>
+          <span class="chapter__eyebrow">Next</span>
+          <h2 class="chapter__title" id="next-title">What I'd Improve Next</h2>
+          <p class="chapter__lead">
+            The assignment answers the brief. The product wouldn't stop here.
+          </p>
+        </header>
+
+        <ul class="cs-next">
+          <li>Color-coded hiring stages</li>
+          <li>Saved recruiter views</li>
+          <li>Bulk candidate actions</li>
+          <li>AI-assisted candidate summaries</li>
+          <li>Recruiter collaboration and notes</li>
+          <li>Keyboard shortcuts for reviewing candidates faster</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <ul class="site-footer__links">
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/ayush-warrier/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <a class="link" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="link site-footer__copy" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <p class="site-footer__note">Vibe coded</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

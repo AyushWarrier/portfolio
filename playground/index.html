@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier | Playground</title>
+  <meta name="description" content="Playground — where I experiment. Design assignments, concepts, visual explorations and ideas that don't fit into a full case study." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/playground" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Warrier | Playground" />
+  <meta property="og:description" content="Playground — where I experiment. Design assignments, concepts, visual explorations and ideas that don't fit into a full case study." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://warrierayush.me/playground" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier | Playground" />
+  <meta name="twitter:description" content="Playground — where I experiment. Design assignments, concepts, visual explorations and ideas that don't fit into a full case study." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <!--
+    PLAYGROUND HOME — the landing page for the Playground, sibling
+    to each self-contained project folder. Portfolio nav + footer,
+    a two-sentence intro, then a four-tile bento grid. Every
+    thumbnail is handcrafted: Nerve is a scattered screen
+    composition, More KLYMB uses the supplied transparent mockup
+    over a crimson glow, Candidate Screening reuses its own case
+    study thumbnail, and Stitch AI is a custom branded panel. The
+    projects are the focus.
+  -->
+</head>
+
+<body class="pg-home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="/#work">Work</a></li>
+          <li><a class="nav__link" href="/#about">About</a></li>
+          <li><a class="nav__link nav__link--alt is-active" href="/playground" aria-current="page">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ INTRO ═══ -->
+    <section class="home-hero" aria-labelledby="pg-heading">
+      <div class="container">
+        <h1 class="home-hero__title" id="pg-heading" data-reveal-load style="--reveal-order: 0">Playground</h1>
+        <p class="home-hero__text" data-reveal-load style="--reveal-order: 1">
+          This is where I experiment. You'll find design assignments,
+          concepts, visual explorations, and ideas that don't fit into a
+          full case study.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ BENTO GRID ═══ -->
+    <section class="bento-section" aria-label="Playground projects">
+      <div class="container">
+        <div class="bento">
+
+          <!-- 01 · Nerve — full-width, a scattered screen composition -->
+          <a class="bento__card bento__card--wide bento__card--nerve" href="nerve/" aria-label="Nerve — open project" data-reveal-load style="--reveal-order: 2">
+            <span class="bento__thumb thumb--nerve">
+              <img class="nerve-shot nerve-shot--left" src="nerve/assets/Story%20Screen.png" alt="" loading="eager" />
+              <img class="nerve-shot nerve-shot--right" src="nerve/assets/Decision%20Screen.png" alt="" loading="eager" />
+              <img class="nerve-shot nerve-shot--center" src="nerve/assets/Launch%20App%20Screen.png" alt="" loading="eager" />
+            </span>
+            <span class="bento__label">Nerve</span>
+          </a>
+
+          <!-- 02 · More KLYMB — supplied mockup over a crimson glow -->
+          <a class="bento__card bento__card--klymb" href="more-klymb/" aria-label="More KLYMB — open project" data-reveal-load style="--reveal-order: 3">
+            <span class="bento__thumb thumb--klymb">
+              <img src="more-klymb/assets/more-klymb%28thumbnail%29.png" alt="" loading="eager" />
+            </span>
+            <span class="bento__label">More KLYMB</span>
+          </a>
+
+          <!-- 03 · Candidate Screening — the case study's own thumbnail -->
+          <a class="bento__card bento__card--screening" href="candidate-screening/" aria-label="Candidate Screening — open project" data-reveal-load style="--reveal-order: 4">
+            <span class="bento__thumb thumb--screening">
+              <img src="candidate-screening/assets/Thumbnail.png" alt="" loading="eager" />
+            </span>
+            <span class="bento__label bento__label--stack">
+              <span class="bento__label-title">Candidate Screening</span>
+              <span class="bento__label-meta">Design Assignment · Dashboard</span>
+            </span>
+          </a>
+
+          <!-- 04 · Testing with Stitch AI — full-width branded panel -->
+          <a class="bento__card bento__card--wide bento__card--stitch" href="testing-stitch-ai/" aria-label="Testing with Stitch AI — open project" data-reveal-load style="--reveal-order: 5">
+            <span class="bento__thumb thumb--stitch">
+              <span class="stitch-word">Stitch AI</span>
+            </span>
+            <span class="bento__label">Testing with Stitch AI</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <ul class="site-footer__links">
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/ayush-warrier/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <a class="link" href="assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="link site-footer__copy" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <p class="site-footer__note">Vibe coded</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
