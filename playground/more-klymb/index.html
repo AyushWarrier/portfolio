@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier | More KLYMB</title>
+  <meta name="description" content="More KLYMB — designs that didn't make it into the KLYMB case study, brought together in one place." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/playground/more-klymb" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Warrier | More KLYMB" />
+  <meta property="og:description" content="More KLYMB — designs that didn't make it into the KLYMB case study, brought together in one place." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://warrierayush.me/playground/more-klymb" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier | More KLYMB" />
+  <meta name="twitter:description" content="More KLYMB — designs that didn't make it into the KLYMB case study, brought together in one place." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="../assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="../../site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <!-- Portfolio shell type — Inter + Fraunces. More KLYMB has no
+       component system of its own (unlike ChefKit) — it's real
+       product screens, composed in the portfolio's own type. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/nav.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/project-shell.css" />
+  <link rel="stylesheet" href="css/more-klymb.css" />
+
+  <!--
+    MORE KLYMB — a Playground project, not a case study. A curated
+    gallery of KLYMB screens left out of the case study to keep it
+    focused. One uniform image treatment throughout (.mk-screen);
+    a masonry gallery (Section 01) plus a large App Store preview
+    pairing (Section 02). No process writing, no mini case studies
+    — the screens are the content. Static — no scroll reveal, no
+    hover choreography.
+  -->
+</head>
+
+<body class="pg-project pg-project--more-klymb">
+  <a class="skip-link" href="#mk-hero">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="/#work">Work</a></li>
+          <li><a class="nav__link" href="/#about">About</a></li>
+          <li><a class="nav__link nav__link--alt" href="/playground">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="proj-hero" id="mk-hero" aria-labelledby="mk-hero-title">
+      <div class="container">
+        <div class="proj-hero__masthead">
+          <p class="proj-hero__eyebrow">Project</p>
+          <h1 class="proj-hero__title" id="mk-hero-title">More KLYMB</h1>
+          <p class="proj-hero__oneline">
+            Designs that didn't make it into the KLYMB case study. To keep
+            the original case study focused, many designs were left out.
+            This page brings them together in one place.
+          </p>
+          <ul class="tag-list proj-hero__tags">
+            <li class="tag">Mobile App</li>
+            <li class="tag">UI Design</li>
+            <li class="tag">Preview Screens</li>
+            <li class="tag">Fitness</li>
+            <li class="tag">Lifestyle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 01 · APP DESIGN ═══ -->
+    <section class="chapter" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">01</span>
+          <span class="chapter__eyebrow">App Design</span>
+          <h2 class="chapter__title" id="gallery-title">More App Screen Designs</h2>
+        </header>
+
+        <div class="mk-gallery">
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Apple Health</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Connect%20%26%20Allow/connect-applehealth%20%28dark%29.png" alt="Connect Apple Health screen, dark theme — what KLYMB reads and why it helps" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Apple Health</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Connect%20%26%20Allow/connect-applehealth%20%28light%29.png" alt="Connect Apple Health screen, light theme — the same layout explored in a light palette" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Notifications</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Connect%20%26%20Allow/allow-notifications%20%28dark%29.png" alt="Enable notifications screen, dark theme — hydration, streak and rank-movement alerts" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Notifications</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Connect%20%26%20Allow/allow-notifications%20%28light%29.png" alt="Enable notifications screen, light theme — the same layout explored in a light palette" loading="lazy" />
+            </span>
+          </figure>
+
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Login</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Login%20and%20SignUp%20Screens/login-screen.png" alt="KLYMB login screen — email and password sign-in, with Google and Apple options" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Create Account</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Login%20and%20SignUp%20Screens/signup-screen%281%29.png" alt="KLYMB sign-up, step 1 of 3 — first name, last name, email and password" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Create Account</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Login%20and%20SignUp%20Screens/signup-screen%282%29.png" alt="KLYMB sign-up, step 2 of 3 — full name and username" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Create Account</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Login%20and%20SignUp%20Screens/signup-screen%283%29.png" alt="KLYMB sign-up, step 3 of 3 — avatar choice, optional city and terms agreement" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Profile Setup</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Profile%20Setup%20Screens/profile-setup%281%29.png" alt="KLYMB profile setup, step 1 of 3 — primary fitness goal and daily water intake" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Profile Setup</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Profile%20Setup%20Screens/profile-setup%282%29.png" alt="KLYMB profile setup, step 2 of 3 — weekly workout frequency and go-to activity" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Profile Setup</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Profile%20Setup%20Screens/profile-setup%283%29.png" alt="KLYMB profile setup, step 3 of 3 — daily step goal and target weight" loading="lazy" />
+            </span>
+          </figure>
+
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Nutrition</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Inner%20Screens/nutrition-screen.png" alt="Nutrition tracking screen — calories, macro breakdown and today's meals" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Workout</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Inner%20Screens/workout-screen.png" alt="Workout tracking screen — last session, route map and performance stats" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Sleep</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Inner%20Screens/sleep-screen.png" alt="Sleep tracking screen — last night's duration, sleep window and quality breakdown" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Hydration</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Inner%20Screens/hydration-screen.png" alt="Hydration tracking screen — today's water intake and quick-add amounts" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Steps</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Inner%20Screens/steps-screen.png" alt="Steps tracking screen — today's step count and weekly activity" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Cycle Tracking</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Cycle%20Tracking%20%28Period%29/cycle-tracker.png" alt="Cycle tracker — current phase, calendar and phase details" loading="lazy" />
+            </span>
+          </figure>
+
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Workout Log</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Log%20Screens/workout-log.png" alt="Log Workout screen — activity picker and session duration" loading="lazy" />
+            </span>
+          </figure>
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Sleep Log</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Log%20Screens/sleep-log.png" alt="Log Sleep screen — hours slept, sleep window and how it felt" loading="lazy" />
+            </span>
+          </figure>
+
+          <figure class="mk-item">
+            <figcaption class="mk-tag">Custom Food</figcaption>
+            <span class="mk-screen">
+              <img src="assets/Create%20Item/nutrition-create-screen.png" alt="Custom Food screen — name, serving unit and per-serving nutrition fields" loading="lazy" />
+            </span>
+          </figure>
+        </div>
+
+        <!-- Cycle Tracking setup — a supporting showcase, not a process.
+             Borrows the case study's own dark onboarding-stage treatment
+             (see Portfolio_V1/css/klymb.css .stage/.onboarding-set —
+             reference only, never edited) rather than the light gallery
+             style above. One grouped composition, not five cards. -->
+        <div class="mk-onboarding">
+          <div class="mk-onboarding__set">
+            <figure class="mk-onboarding__item">
+              <figcaption class="mk-tag">Last Period</figcaption>
+              <span class="mk-onboarding__screen">
+                <img src="assets/Cycle%20Tracking%20%28Period%29/cycle-tracker-setup%281%29.png" alt="Cycle tracker setup, step 1 of 5 — last period start date" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="mk-onboarding__item">
+              <figcaption class="mk-tag">Typical Cycle</figcaption>
+              <span class="mk-onboarding__screen">
+                <img src="assets/Cycle%20Tracking%20%28Period%29/cycle-tracker-setup%282%29.png" alt="Cycle tracker setup, step 2 of 5 — usual period length" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="mk-onboarding__item">
+              <figcaption class="mk-tag">Cycle Length</figcaption>
+              <span class="mk-onboarding__screen">
+                <img src="assets/Cycle%20Tracking%20%28Period%29/cycle-tracker-setup%283%29.png" alt="Cycle tracker setup, step 3 of 5 — usual cycle length" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="mk-onboarding__item">
+              <figcaption class="mk-tag">Symptoms</figcaption>
+              <span class="mk-onboarding__screen">
+                <img src="assets/Cycle%20Tracking%20%28Period%29/cycle-tracker-setup%284%29.png" alt="Cycle tracker setup, step 4 of 5 — symptoms to log" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="mk-onboarding__item">
+              <figcaption class="mk-tag">Reminders</figcaption>
+              <span class="mk-onboarding__screen">
+                <img src="assets/Cycle%20Tracking%20%28Period%29/cycle-tracker-setup%285%29.png" alt="Cycle tracker setup, step 5 of 5 — period reminder preference" loading="lazy" />
+              </span>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · PREVIEW SCREENS ═══ -->
+    <section class="chapter chapter--tight" id="appstore" aria-labelledby="appstore-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">02</span>
+          <span class="chapter__eyebrow">Preview Screens</span>
+          <h2 class="chapter__title" id="appstore-title">Concepts for App Store Preview</h2>
+          <p class="chapter__lead">
+            Two visual directions exploring how KLYMB could be presented on
+            the App Store. These concepts explored different colour
+            treatments, hierarchy and presentation while remaining flexible
+            enough to evolve with the product.
+          </p>
+        </header>
+      </div>
+
+      <div class="mk-showcase">
+        <figure class="mk-showcase__item">
+          <figcaption class="mk-tag">Dark Concept</figcaption>
+          <span class="mk-screen">
+            <img src="assets/App-Store%20Preview/app-store_preview%28barcode%29-dark.png" alt="App Store preview concept, dark — the barcode scanning feature on a dark, ambient background" loading="lazy" />
+          </span>
+        </figure>
+        <figure class="mk-showcase__item">
+          <figcaption class="mk-tag">Light Concept</figcaption>
+          <span class="mk-screen">
+            <img src="assets/App-Store%20Preview/app-store_preview%28barcode%29-light.png" alt="App Store preview concept, light — the same barcode scanning feature in a light, device-framed presentation" loading="lazy" />
+          </span>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <ul class="site-footer__links">
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/ayush-warrier/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <a class="link" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="link site-footer__copy" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <p class="site-footer__note">Vibe coded</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

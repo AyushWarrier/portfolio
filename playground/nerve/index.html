@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier | Nerve</title>
+  <meta name="description" content="Nerve — a 72-hour Product Design assignment for Fam. A learning app that helps teenagers build the confidence to invest by making decisions before they ever risk real money." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/playground/nerve" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Warrier | Nerve" />
+  <meta property="og:description" content="Nerve — a 72-hour Product Design assignment for Fam. A learning app that helps teenagers build the confidence to invest by making decisions before they ever risk real money." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://warrierayush.me/playground/nerve" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier | Nerve" />
+  <meta name="twitter:description" content="Nerve — a 72-hour Product Design assignment for Fam. A learning app that helps teenagers build the confidence to invest by making decisions before they ever risk real money." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="../assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="../../site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <!-- Portfolio shell type — Inter + Fraunces. Like More KLYMB, Nerve
+       has no component system of its own: it's real product screens
+       (images) composed in the portfolio's own type. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/nav.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/project-shell.css" />
+  <link rel="stylesheet" href="css/nerve.css" />
+
+  <!--
+    NERVE — a Playground project: a 72-hour Product Design assignment
+    for Fam, presented as an exploration of thinking rather than a
+    polished case study. Guiding principle, same as the rest of the
+    portfolio: less reading, more understanding. Visuals carry the
+    story; the editorial diagrams (brief, reframe, research, loop)
+    are built in HTML/CSS and are intentionally static — no hover, no
+    motion — so they read as native to the page. Every word is drawn
+    from the Nerve Product Document; nothing is invented. Content
+    source of truth, never edited.
+  -->
+</head>
+
+<body class="pg-project pg-project--nerve">
+  <a class="skip-link" href="#nerve-hero">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="/#work">Work</a></li>
+          <li><a class="nav__link" href="/#about">About</a></li>
+          <li><a class="nav__link nav__link--alt" href="/playground">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="proj-hero" id="nerve-hero" aria-labelledby="nerve-hero-title">
+      <div class="container">
+        <div class="proj-hero__masthead">
+          <p class="proj-hero__eyebrow">Design Assignment</p>
+          <h1 class="proj-hero__title" id="nerve-hero-title">Nerve<span class="nerve-dot">.</span></h1>
+          <p class="proj-hero__oneline">
+            A 72-hour design assignment submission for the Product Design
+            Intern role at Fam. A learning app that helps teenagers build
+            the confidence to invest by making decisions before they ever
+            risk real money.
+          </p>
+          <ul class="tag-list proj-hero__tags">
+            <li class="tag">Mobile App</li>
+            <li class="tag">Product Design</li>
+            <li class="tag">FinTech</li>
+            <li class="tag">Stock Market</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 01 · THE ASSIGNMENT ═══ -->
+    <section class="chapter" id="assignment" aria-labelledby="assignment-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">01</span>
+          <span class="chapter__eyebrow">The Assignment</span>
+          <h2 class="chapter__title" id="assignment-title">What the brief asked for</h2>
+        </header>
+
+        <div class="brief">
+          <div class="brief__block">
+            <span class="brief__label">Design Challenge</span>
+            <span class="brief__rule" aria-hidden="true"></span>
+            <p class="brief__challenge">
+              Design a gamified platform where teens learn the basics,
+              build real skills, and eventually invest real money once
+              they reach a certain level.
+            </p>
+          </div>
+          <div class="brief__block brief__block--goal">
+            <span class="brief__label brief__label--accent">My Goal</span>
+            <span class="brief__rule" aria-hidden="true"></span>
+            <p class="brief__goal">
+              Not a faster way to teach investing — a way to make deciding
+              feel safe. A learning app where teenagers make real calls,
+              and see what happens, before any real money is on the line.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · MY PERSPECTIVE ═══ -->
+    <section class="chapter" id="perspective" aria-labelledby="perspective-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">02</span>
+          <span class="chapter__eyebrow">My Perspective</span>
+          <h2 class="chapter__title" id="perspective-title">The problem, the way I saw it</h2>
+          <p class="chapter__lead">
+            The brief pointed at awareness. But teens can Google anything,
+            anytime. What actually stops them isn't knowledge — it's
+            confidence. "I'll lose money." "Mera luck nahi hai stocks mein."
+            Those are fear problems, not knowledge ones. So the app
+            shouldn't teach faster; it should make deciding feel safe.
+          </p>
+        </header>
+
+        <div class="reframe">
+          <div class="reframe__col">
+            <span class="reframe__label">The assignment</span>
+            <svg class="flow-arrow flow-arrow--down" viewBox="0 0 20 28" fill="none" aria-hidden="true">
+              <path d="M10 1v24M4 19l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="reframe__node">Teach investing</span>
+          </div>
+
+          <span class="reframe__vsplit" aria-hidden="true"></span>
+
+          <div class="reframe__col">
+            <span class="reframe__label reframe__label--accent">My perspective</span>
+            <svg class="flow-arrow flow-arrow--down" viewBox="0 0 20 28" fill="none" aria-hidden="true">
+              <path d="M10 1v24M4 19l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="reframe__node reframe__node--accent">Build confidence</span>
+            <svg class="flow-arrow flow-arrow--down" viewBox="0 0 20 28" fill="none" aria-hidden="true">
+              <path d="M10 1v24M4 19l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="reframe__node">Teach through decisions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · RESEARCH ═══ -->
+    <section class="chapter" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">03</span>
+          <span class="chapter__eyebrow">Research</span>
+          <h2 class="chapter__title" id="research-title">How I researched it</h2>
+          <p class="chapter__lead">
+            Two inputs, given the time: friends who actually follow the
+            market, and a Deep Research pass to back up a few assumptions.
+          </p>
+        </header>
+
+        <div class="research">
+          <div class="research__quotes">
+            <p class="research__col-head">From two friends</p>
+            <blockquote class="research__quote">Gen Z jaldi bore ho jaate hai agar long blogs ya bohot words dekh ke.</blockquote>
+            <blockquote class="research__quote">Kuch interactive features ya competition karna.</blockquote>
+            <blockquote class="research__quote">If you use memes in notifications, it gets more clicks.</blockquote>
+          </div>
+
+          <div class="research__desk">
+            <p class="research__col-head">Gemini Deep Research</p>
+            <p class="research__desk-note">Tied to Google's Search Index, pointed at five questions:</p>
+            <ul class="research__topics">
+              <li>Gen Z product behaviour</li>
+              <li>Financial learning products</li>
+              <li>Indian investment rules for minors</li>
+              <li>Gamification in apps</li>
+              <li>Light vs. dark mode preference</li>
+            </ul>
+            <p class="research__stat">
+              <b>27-page report</b>
+              <span>— it validated some assumptions, and made me rethink a few others.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · PRODUCT IDEA ═══ -->
+    <section class="chapter" id="idea" aria-labelledby="idea-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">04</span>
+          <span class="chapter__eyebrow">Product Idea</span>
+          <h2 class="chapter__title" id="idea-title">The main concept of Nerve<span class="nerve-dot">.</span></h2>
+          <p class="chapter__lead">
+            Most apps teach you first, then test you. Nerve flips it — you
+            make the call before you know the answer, because that's how
+            investing actually works. This loop is the whole product;
+            stories and journeys just sit on top of it.
+          </p>
+        </header>
+
+        <div class="loop">
+          <ol class="loop__flow">
+            <li class="loop__step">
+              <span class="loop__num">01</span>
+              <div class="loop__body">
+                <h3 class="loop__title">Story</h3>
+                <p class="loop__cap">Something happens. You get the background.</p>
+              </div>
+            </li>
+            <li class="loop__step">
+              <span class="loop__num">02</span>
+              <div class="loop__body">
+                <h3 class="loop__title">Decision</h3>
+                <p class="loop__cap">You make the call. No button — just press and hold.</p>
+              </div>
+            </li>
+            <li class="loop__step">
+              <span class="loop__num">03</span>
+              <div class="loop__body">
+                <h3 class="loop__title">Time passes</h3>
+                <p class="loop__cap">Walk the weeks or years yourself, and watch it happen.</p>
+              </div>
+            </li>
+            <li class="loop__step">
+              <span class="loop__num">04</span>
+              <div class="loop__body">
+                <h3 class="loop__title">Result</h3>
+                <p class="loop__cap">Find out if you made the right call.</p>
+              </div>
+            </li>
+            <li class="loop__step">
+              <span class="loop__num">05</span>
+              <div class="loop__body">
+                <h3 class="loop__title">Explanation</h3>
+                <p class="loop__cap">Every scenario has a reason behind it — never a guessing game.</p>
+              </div>
+            </li>
+            <li class="loop__step">
+              <span class="loop__num">06</span>
+              <div class="loop__body">
+                <h3 class="loop__title">Reflection</h3>
+                <p class="loop__cap">What did you actually take away?</p>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="loop__aside nerve-stage">
+            <span class="nerve-cap">The decision, in pieces</span>
+            <img class="loop__option" src="assets/components/option.png" alt="A Nerve option card — 'Rise · Investors love the ambition' — one of three choices in a decision" loading="lazy" />
+            <img class="loop__hold" src="assets/components/hold-button.png" alt="The circular press-and-hold button labelled 'Hold'" loading="lazy" />
+            <p class="loop__aside-note">
+              <b>No tap target.</b> You pick an option, then press and hold to
+              commit — the small nerve the gesture takes mirrors the call itself.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 05 · IDEATION ═══ -->
+    <section class="chapter" id="ideation" aria-labelledby="ideation-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">05</span>
+          <span class="chapter__eyebrow">Ideation</span>
+          <h2 class="chapter__title" id="ideation-title">Sketched before it was designed</h2>
+          <p class="chapter__lead">
+            Before any pixels, I sketched every screen in low fidelity —
+            mapping the full flow and rough UX copy on one sheet.
+          </p>
+        </header>
+
+        <figure class="frame wire">
+          <img src="assets/wireframe_ss.png" alt="Low-fidelity wireframe sheet — every Nerve screen sketched in one sheet: splash, launch, story, select option, result, explanation, reflection, sign-up, and the four main tabs" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ 06 · FINAL DESIGNS ═══ -->
+    <section class="chapter" id="final" aria-labelledby="final-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">06</span>
+          <span class="chapter__eyebrow">Final Designs</span>
+          <h2 class="chapter__title" id="final-title">Walking through the app</h2>
+          <p class="chapter__lead">
+            Dark, but warm — closer to a well-designed magazine than a
+            flashy game. The fun comes from the interaction and the
+            writing, not the decoration.
+          </p>
+        </header>
+
+        <!-- First-Time Experience -->
+        <div class="nerve-group">
+          <header class="nerve-group__head">
+            <span class="nerve-group__eyebrow">First-Time Experience</span>
+            <h3 class="nerve-group__title">Onboarding puts you through it</h3>
+            <p class="nerve-group__lead">
+              No explainer screens. A real market moment that already
+              happened, run one decision at a time.
+            </p>
+          </header>
+
+          <div class="nerve-gallery nerve-gallery--grid">
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Launch</figcaption>
+              <span class="nerve-screen"><img src="assets/Launch%20App%20Screen.png" alt="Launch screen — 'You don't learn investing by reading about it. You learn it by making the call.' with a 'Make your first call' button" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Story</figcaption>
+              <span class="nerve-screen"><img src="assets/Story%20Screen.png" alt="Story screen — the background to a real market scenario" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Decision</figcaption>
+              <span class="nerve-screen"><img src="assets/Decision%20Screen.png" alt="Decision screen — 'Over the next 6 months, does Slack's stock rise, hold, or fall?' with three options and a press-and-hold button" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Butterfly Effect — 1</figcaption>
+              <span class="nerve-screen"><img src="assets/Butterfly%20Effect%20-%201.png" alt="Butterfly Effect, part 1 — walking forward through time after the decision" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Butterfly Effect — 2</figcaption>
+              <span class="nerve-screen"><img src="assets/Butterfly%20Effect%20-%202.png" alt="Butterfly Effect, part 2 — the scenario unfolds week by week" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Butterfly Effect — 3</figcaption>
+              <span class="nerve-screen"><img src="assets/Butterfly%20Effect%20-%203.png" alt="Butterfly Effect, part 3 — the last stretch before the result" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Result</figcaption>
+              <span class="nerve-screen"><img src="assets/Result%20Screen.png" alt="Result screen — whether the call was right" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Explanation</figcaption>
+              <span class="nerve-screen"><img src="assets/Explanation%20Screen.png" alt="Explanation screen — the reason behind what happened, so it never feels like guessing" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Reflection</figcaption>
+              <span class="nerve-screen"><img src="assets/Reflection%20Screen.png" alt="Reflection screen — what you actually took away from the call" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Sign Up</figcaption>
+              <span class="nerve-screen"><img src="assets/Sign%20Up%20Screen.png" alt="Sign-up screen — simple, short, only what's necessary" loading="lazy" /></span>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Daily Experience -->
+        <div class="nerve-group">
+          <header class="nerve-group__head">
+            <span class="nerve-group__eyebrow">Daily Experience</span>
+            <h3 class="nerve-group__title">One story a day, four tabs</h3>
+            <p class="nerve-group__lead">
+              After the first run, Nerve settles into a simple rhythm —
+              just one story a day, so nobody binges and burns out.
+            </p>
+          </header>
+
+          <div class="nerve-grid--two">
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Home — Today</figcaption>
+              <span class="nerve-screen"><img src="assets/Home%20Screen.png" alt="Home screen — a greeting, today's story, and a short list of things waiting for you" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Journeys</figcaption>
+              <span class="nerve-screen"><img src="assets/Journeys%20Screen.png" alt="Journeys screen — big market events like the COVID Crash and GameStop, told as a chain of decisions" loading="lazy" /></span>
+            </figure>
+          </div>
+
+          <div class="nerve-chips nerve-chips--tabbar nerve-stage">
+            <span class="nerve-cap">The four tabs</span>
+            <img src="assets/components/navbar%28today%29.png" alt="Nerve tab bar — Today, Journeys, Playground, You" loading="lazy" />
+            <p class="nerve-chips__note">
+              <b>Today</b> for the daily story, <b>Journeys</b> for the big
+              events, <b>Playground</b> to poke at the "why", and <b>You</b>
+              for progress.
+            </p>
+          </div>
+        </div>
+
+        <!-- Playground -->
+        <div class="nerve-group">
+          <header class="nerve-group__head">
+            <span class="nerve-group__eyebrow">Playground</span>
+            <h3 class="nerve-group__title">No story, no right answer</h3>
+            <p class="nerve-group__lead">
+              Pull a lever and watch what moves — drag interest rates up and
+              down, and watch the market's appetite for stocks react.
+            </p>
+          </header>
+
+          <div class="nerve-split">
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Playground screen</figcaption>
+              <span class="nerve-screen"><img src="assets/Playground%20Screen.png" alt="Playground screen — an open sandbox for poking at market mechanics with no score" loading="lazy" /></span>
+            </figure>
+            <div class="nerve-split__aside">
+              <p>
+                The same interactive card at four points on the dial —
+                from cheap money to expensive — showing how appetite for
+                stocks rises and falls with the rate.
+              </p>
+            </div>
+          </div>
+
+          <div class="nerve-cards">
+            <figure class="nerve-card">
+              <figcaption class="nerve-cap">2.0% · High</figcaption>
+              <img src="assets/components/playground-high_card.png" alt="Playground card at 2.0% interest — market appetite for stocks is High" loading="lazy" />
+            </figure>
+            <figure class="nerve-card">
+              <figcaption class="nerve-cap">4.0% · Balance</figcaption>
+              <img src="assets/components/playground-balance_card.png" alt="Playground card at 4.0% interest — market appetite is Balanced" loading="lazy" />
+            </figure>
+            <figure class="nerve-card">
+              <figcaption class="nerve-cap">6.5% · Cool</figcaption>
+              <img src="assets/components/playground-cool_card.png" alt="Playground card at 6.5% interest — market appetite is Cooling" loading="lazy" />
+            </figure>
+            <figure class="nerve-card">
+              <figcaption class="nerve-cap">8.5% · Low</figcaption>
+              <img src="assets/components/playground-low_card.png" alt="Playground card at 8.5% interest — market appetite is Low" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+
+        <!-- Progress & Rewards -->
+        <div class="nerve-group">
+          <header class="nerve-group__head">
+            <span class="nerve-group__eyebrow">Progress &amp; Rewards</span>
+            <h3 class="nerve-group__title">Identities, not points</h3>
+            <p class="nerve-group__lead">
+              You move through five identities — Explorer to Investor
+              Ready. Achievements reward behaviour, not completion.
+            </p>
+          </header>
+
+          <div class="nerve-gallery">
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">You — Profile</figcaption>
+              <span class="nerve-screen"><img src="assets/You%20%28Profile%29%20Screen.png" alt="Profile screen — your progress, what Nerve has noticed about how you decide, and your achievements" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Achievement</figcaption>
+              <span class="nerve-screen"><img src="assets/Achievement%20Screen.png" alt="Achievement screen — a reward earned for behaviour, like staying calm through a crash" loading="lazy" /></span>
+            </figure>
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Investor Ready</figcaption>
+              <span class="nerve-screen"><img src="assets/Investor%20Ready%20Screen.png" alt="Investor Ready screen — the final identity, how close you are to investing for real" loading="lazy" /></span>
+            </figure>
+          </div>
+
+          <div class="nerve-share">
+            <figure class="nerve-figure">
+              <figcaption class="nerve-cap">Share Card Concept</figcaption>
+              <img src="assets/components/Share%20Card%20Quick%20Concept.png" alt="Share card concept — a Nerve 'Stayed Calm' achievement card, designed to be shared on Instagram" loading="lazy" />
+            </figure>
+            <div class="nerve-share__note">
+              <p>
+                There's no public leaderboard — so these achievement cards,
+                built to be shared, are how Nerve actually gets seen by
+                other people.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 07 · REFLECTION ═══ -->
+    <section class="chapter chapter--tight" id="reflection" aria-labelledby="reflection-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">07</span>
+          <span class="chapter__eyebrow">Reflection</span>
+          <h2 class="chapter__title" id="reflection-title">Where it stands</h2>
+        </header>
+
+        <div class="reflect">
+          <div class="reflect__col">
+            <p class="reflect__col-head">What I'd improve</p>
+            <p>
+              I'm technically Gen Z myself, but I don't think "fun" has to
+              mean confetti and mascots. Nerve is calm and editorial on
+              purpose — the interaction and the writing do the work, not
+              the decoration. If testing showed this reads as too
+              restrained, I'd loosen it up — but only after testing with
+              real users, not by assuming.
+            </p>
+          </div>
+          <div class="reflect__col">
+            <p class="reflect__col-head">With more time</p>
+            <p>
+              Learn day trading, charts and technical analysis properly — I
+              cut them because I won't design what I can't defend — and test
+              the whole thing with real teenagers.
+            </p>
+          </div>
+        </div>
+
+        <div class="nerve-name">
+          <h3 class="nerve-name__title">The name — Nerve<span class="nerve-dot">.</span></h3>
+          <p class="nerve-name__text">
+            Investing takes nerve — the guts to actually make a call. And
+            "nerves" is the feeling I'm trying to calm. Same word, both
+            sides of the problem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <ul class="site-footer__links">
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/ayush-warrier/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <a class="link" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="link site-footer__copy" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <p class="site-footer__note">Vibe coded</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="js/nerve.js" defer></script>
+</body>
+</html>

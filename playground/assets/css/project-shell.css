@@ -1,0 +1,140 @@
+/* =============================================================
+   PLAYGROUND PROJECT SHELL
+   The portfolio's own case-study shell (hero masthead, chapter
+   rhythm, presentation frame, project footer nav), adapted for
+   Playground project pages. Chrome only — typography, colour and
+   spacing here all come from the portfolio's variables.css, the
+   same as every other page. Each project sets one accent via
+   --project-accent (the only thing that changes page to page).
+   ============================================================= */
+
+.pg-project {
+  --chapter-gap: clamp(3.25rem, 6vw, 5.5rem);
+}
+
+/* =============================================================
+   HERO — masthead only, no thumbnail. A project page opens like
+   a case study, then gets straight out of the way.
+   ============================================================= */
+.proj-hero {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-2);
+}
+
+.proj-hero__masthead {
+  max-width: 52ch;
+}
+
+.proj-hero__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--project-accent);
+}
+
+.proj-hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-top: var(--space-3);
+}
+
+.proj-hero__oneline {
+  margin-top: var(--space-5);
+  max-width: 46ch;
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+}
+
+.proj-hero__tags {
+  margin-top: var(--space-6);
+}
+
+/* =============================================================
+   CHAPTER SHELL — one topic per section, a big faint index
+   number, an eyebrow, a title. Identical rhythm to the case
+   studies so the page reads as another one of them.
+   ============================================================= */
+.chapter {
+  padding-block: var(--chapter-gap);
+}
+
+.chapter__head {
+  max-width: 46ch;
+  margin-bottom: var(--space-7);
+}
+
+.chapter__index {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: var(--weight-regular);
+  line-height: 1;
+  color: var(--color-surface);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.chapter__eyebrow {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--project-accent);
+}
+
+.chapter__title {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-2);
+}
+
+.chapter__lead {
+  margin-top: var(--space-4);
+  max-width: 52ch;
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+}
+
+.chapter--tight {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+/* =============================================================
+   FRAME — the presentation container every specimen lives in.
+   A quiet gallery wall: it frames the work, never competes with
+   it. Neutral, generously padded, softly bordered.
+   ============================================================= */
+.frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-soft);
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* =============================================================
+   CLOSING — a quiet documentation colophon, not a reflection.
+   Same tight rhythm as a case study's final beat.
+   ============================================================= */
+.closing {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+.closing__inner {
+  max-width: 58ch;
+}
+
+.closing__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+}
+
+.closing__text {
+  margin-top: var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: var(--text-md);
+}

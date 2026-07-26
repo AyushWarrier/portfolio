@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier | Testing Stitch AI</title>
+  <meta name="description" content="Testing Stitch AI — using Google's Stitch to explore a community-first product idea for India's motorcycle riding community, from prompt to interface." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/playground/testing-stitch-ai" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Warrier | Testing Stitch AI" />
+  <meta property="og:description" content="Testing Stitch AI — using Google's Stitch to explore a community-first product idea for India's motorcycle riding community, from prompt to interface." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://warrierayush.me/playground/testing-stitch-ai" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier | Testing Stitch AI" />
+  <meta name="twitter:description" content="Testing Stitch AI — using Google's Stitch to explore a community-first product idea for India's motorcycle riding community, from prompt to interface." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="../assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="../../site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <!-- Portfolio shell type — Inter + Fraunces, same as every other
+       Playground page. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/nav.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/project-shell.css" />
+  <link rel="stylesheet" href="css/testing-stitch-ai.css" />
+
+  <!--
+    TESTING STITCH AI — a Playground project, not a case study. A
+    design exploration: instead of recreating an existing app, Stitch
+    was pointed at an original idea for India's motorcycle riding
+    community, with the visual direction left almost entirely to it.
+    Four sections only — the idea, the output, observations, a closing
+    reflection — no process diagrams, no invented visuals. Section 02
+    is deliberately visual-only: the six generated screens, captioned,
+    nothing else. Static — no scroll reveal, no hover choreography.
+  -->
+</head>
+
+<body class="pg-project pg-project--stitch">
+  <a class="skip-link" href="#stitch-hero">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="/#work">Work</a></li>
+          <li><a class="nav__link" href="/#about">About</a></li>
+          <li><a class="nav__link nav__link--alt" href="/playground">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="proj-hero" id="stitch-hero" aria-labelledby="stitch-hero-title">
+      <div class="container">
+        <div class="proj-hero__masthead">
+          <p class="proj-hero__eyebrow">Design Exploration</p>
+          <h1 class="proj-hero__title" id="stitch-hero-title">Testing Stitch AI<span class="stitch-dot">.</span></h1>
+          <p class="proj-hero__oneline">
+            Google recently introduced Stitch AI, a tool that generates
+            interfaces from prompts. Instead of recreating an existing
+            app, I used it to explore an idea I'd been thinking about
+            for quite some time — a product for India's motorcycle
+            riding community.
+          </p>
+          <ul class="tag-list proj-hero__tags">
+            <li class="tag">Google Stitch</li>
+            <li class="tag">AI Design</li>
+            <li class="tag">Prompt Engineering</li>
+            <li class="tag">UI Exploration</li>
+            <li class="tag">Motorcycles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 01 · THE IDEA ═══ -->
+    <section class="chapter" id="idea" aria-labelledby="idea-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">01</span>
+          <span class="chapter__eyebrow">The Idea</span>
+          <h2 class="chapter__title" id="idea-title">The Idea</h2>
+        </header>
+
+        <div class="stitch-idea">
+          <p>
+            I wanted to see how well Stitch could understand a product
+            idea rather than a UI prompt.
+          </p>
+          <p>
+            As someone who enjoys motorcycle touring, I've always felt
+            riders rely on too many disconnected platforms. Routes come
+            from Maps, ride planning happens in WhatsApp, road updates
+            live inside old Reddit posts, and discovering new rides
+            depends on social media.
+          </p>
+          <p>
+            Instead of designing another maps app, I imagined a
+            community-first product where riders could discover routes,
+            organize rides and stay informed in one place.
+          </p>
+          <p>
+            I deliberately gave Stitch the freedom to decide the visual
+            language, layout and design system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · OUTPUT ═══ -->
+    <section class="chapter" id="output" aria-labelledby="output-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">02</span>
+          <span class="chapter__eyebrow">Output</span>
+          <h2 class="chapter__title" id="output-title">What Stitch gave me</h2>
+        </header>
+
+        <div class="stitch-row">
+          <div class="stitch-grid">
+            <figure class="stitch-figure">
+              <figcaption class="stitch-cap">Home</figcaption>
+              <span class="stitch-screen">
+                <img src="assets/Home%20Screen.png" alt="Home screen — a ride-ready map, saved rides, nearby public rides to join, and live road alerts" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="stitch-figure">
+              <figcaption class="stitch-cap">Settings</figcaption>
+              <span class="stitch-screen">
+                <img src="assets/Settings%20Page.png" alt="Settings screen — appearance, notifications, permissions, ride and safety, and app preferences" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="stitch-figure">
+              <figcaption class="stitch-cap">Profile</figcaption>
+              <span class="stitch-screen">
+                <img src="assets/Profile%20Page.png" alt="Profile screen — rider identity, garage, riding stats, a map of states ridden, and upcoming rides" loading="lazy" />
+              </span>
+            </figure>
+          </div>
+        </div>
+
+        <div class="stitch-row">
+          <div class="stitch-grid">
+            <figure class="stitch-figure">
+              <figcaption class="stitch-cap">Create Ride — Step 1</figcaption>
+              <span class="stitch-screen">
+                <img src="assets/Create%20Ride%20-%20Step%201.png" alt="Create Ride, step 1 of 3 — ride name, date, start time, ride type and riding pace" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="stitch-figure">
+              <figcaption class="stitch-cap">Create Ride — Step 2</figcaption>
+              <span class="stitch-screen">
+                <img src="assets/Create%20Ride%20-%20Step%202.png" alt="Create Ride, step 2 of 3 — choosing a route from saved routes, the map or a GPX import, plus stops and waypoints" loading="lazy" />
+              </span>
+            </figure>
+            <figure class="stitch-figure">
+              <figcaption class="stitch-cap">Create Ride — Step 3</figcaption>
+              <span class="stitch-screen">
+                <img src="assets/Create%20Ride%20-%20Step%203.png" alt="Create Ride, step 3 of 3 — ride summary, a shareable ride code, and invite options" loading="lazy" />
+              </span>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · OBSERVATIONS ═══ -->
+    <section class="chapter" id="observations" aria-labelledby="observations-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">03</span>
+          <span class="chapter__eyebrow">Observations</span>
+          <h2 class="chapter__title" id="observations-title">What surprised me</h2>
+        </header>
+
+        <div class="stitch-observations">
+          <div class="card stitch-observation">
+            <span class="stitch-observation__num">01</span>
+            <h3 class="stitch-observation__title">Consistency</h3>
+            <p class="stitch-observation__text">
+              Every screen followed the same visual language without me
+              defining one.
+            </p>
+          </div>
+          <div class="card stitch-observation">
+            <span class="stitch-observation__num">02</span>
+            <h3 class="stitch-observation__title">Design System</h3>
+            <p class="stitch-observation__text">
+              It generated colours, typography, spacing and reusable UI
+              patterns that felt surprisingly coherent.
+            </p>
+          </div>
+          <div class="card stitch-observation">
+            <span class="stitch-observation__num">03</span>
+            <h3 class="stitch-observation__title">Structure</h3>
+            <p class="stitch-observation__text">
+              Instead of random screens, Stitch understood navigation and
+              produced interfaces that felt connected as part of one
+              product.
+            </p>
+          </div>
+          <div class="card stitch-observation">
+            <span class="stitch-observation__num">04</span>
+            <h3 class="stitch-observation__title">Speed</h3>
+            <p class="stitch-observation__text">
+              Going from an idea to something visual took minutes instead
+              of hours, making it much easier to evaluate whether the
+              concept had potential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · REFLECTION ═══ -->
+    <section class="chapter chapter--tight" id="reflection" aria-labelledby="reflection-title">
+      <div class="container">
+        <header class="chapter__head">
+          <span class="chapter__index">04</span>
+          <span class="chapter__eyebrow">Reflection</span>
+          <h2 class="chapter__title" id="reflection-title">Final Thoughts</h2>
+        </header>
+
+        <div class="stitch-reflection">
+          <p>Stitch surprised me more than I expected.</p>
+          <p>
+            It didn't just generate individual screens — it generated a
+            surprisingly coherent visual language with colors, typography
+            and reusable components.
+          </p>
+          <p>
+            Where it still struggles is product thinking. Interactions
+            involving maps, rider collaboration and more complex
+            workflows still need human decisions. Some screens also felt
+            generic and would need refinement before becoming a real
+            product.
+          </p>
+          <p>
+            For me, tools like Stitch don't replace design. They simply
+            make the first step much faster.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <ul class="site-footer__links">
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/ayush-warrier/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <a class="link" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="link site-footer__copy" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <p class="site-footer__note">Vibe coded</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

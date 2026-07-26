@@ -1,0 +1,87 @@
+/* =============================================================
+   FOOTER
+   Minimal by mandate: three text links, a quiet colophon and a
+   low-key "vibe coded" note. No form, no CTA, no repeat intro.
+   The copy-email toast lives here too.
+   ============================================================= */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  /* Was var(--section-gap) (4–8rem), stacking on top of
+     Experience's own bottom padding — the footer read as
+     detached from the page. Noticeably tightened. */
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  padding-block: var(--space-7);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5) var(--space-6);
+  font-size: var(--text-md);
+}
+
+/* Copy-email button styled to match the text links */
+.site-footer__copy {
+  background: none;
+  border: none;
+  padding: 0;
+  padding-bottom: 1px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.site-footer__copy svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  transition: color var(--dur) var(--ease);
+}
+
+.site-footer__copy:hover svg,
+.site-footer__copy:focus-visible svg {
+  color: var(--color-accent);
+}
+
+/* "Vibe coded" — visible, but almost an easter egg */
+.site-footer__note {
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  opacity: 0.55;
+}
+
+/* --- Toast — copy-email feedback --------------------------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--space-6);
+  transform: translate(-50%, 8px);
+  z-index: 300;
+  padding: 0.65em 1.1em;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

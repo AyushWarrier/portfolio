@@ -1,0 +1,153 @@
+/* =============================================================
+   TESTING STITCH AI — a Playground project, not a case study.
+   A design exploration: how well Google's Stitch could turn a
+   product idea (a community app for India's motorcycle riders)
+   into an interface, with almost no design direction given.
+
+   Uses the portfolio's own default accent (--color-accent) rather
+   than a bespoke identity colour — this isn't a branded product,
+   it's an exploration, so it borrows the shell's own accent the
+   same way the hero dot elsewhere ties a page to its work.
+
+   Four sections only: the idea (typography only, no diagrams),
+   the output (six generated screens, almost entirely visual),
+   observations (four small editorial cards), and a closing
+   reflection. No process illustrations, no invented sections.
+   ============================================================= */
+
+.pg-project--stitch {
+  --project-accent: var(--color-accent);
+}
+
+.pg-project--stitch .proj-hero__masthead { max-width: 58ch; }
+.pg-project--stitch .proj-hero__oneline  { max-width: 54ch; }
+
+/* Only the full stop takes the accent. */
+.stitch-dot { color: var(--project-accent); }
+
+/* =============================================================
+   01 · THE IDEA — plain prose, single column, kept short. Reads
+   like a quick note, not a brief.
+   ============================================================= */
+.stitch-idea {
+  margin-top: var(--space-6);
+  max-width: 60ch;
+  display: grid;
+  gap: var(--space-5);
+  font-size: var(--text-md);
+  color: var(--color-text);
+}
+
+/* =============================================================
+   02 · OUTPUT — almost entirely visual. No lead paragraph under
+   the chapter head; the title introduces the section and the
+   screens do the rest. Two rows of three, in reading order, each
+   screen large and captioned above (never inside) the frame.
+   A straight grid rather than masonry keeps markup order = visual
+   order even though the six screens vary a lot in height.
+   ============================================================= */
+.stitch-row + .stitch-row {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.stitch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  align-items: start;
+}
+
+.stitch-figure { display: block; margin: 0; }
+
+.stitch-cap {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.stitch-screen {
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-soft);
+  box-shadow: var(--shadow-md);
+}
+
+.stitch-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .stitch-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .stitch-grid { grid-template-columns: 1fr; }
+}
+
+/* =============================================================
+   03 · OBSERVATIONS — four small, quiet cards. Built on the
+   shared .card base; nothing added beyond a number, a title and
+   one line of text.
+   ============================================================= */
+.stitch-observations {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.stitch-observation {
+  padding: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.stitch-observation__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--project-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.stitch-observation__title {
+  margin-top: var(--space-3);
+  font-family: var(--font-serif);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xl);
+  letter-spacing: var(--tracking-tight);
+}
+
+.stitch-observation__text {
+  margin-top: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--text-md);
+}
+
+@media (max-width: 640px) {
+  .stitch-observations { grid-template-columns: 1fr; }
+}
+
+/* =============================================================
+   04 · REFLECTION — plain prose, single column, same measure as
+   the idea section. No signature, no closing flourish; the
+   footer follows immediately.
+   ============================================================= */
+.stitch-reflection {
+  margin-top: var(--space-6);
+  max-width: 60ch;
+  display: grid;
+  gap: var(--space-5);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+}
+
+.stitch-reflection p:first-child {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+}

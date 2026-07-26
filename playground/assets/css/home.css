@@ -1,0 +1,314 @@
+/* =============================================================
+   PLAYGROUND HOME
+   The landing page for the Playground. Deliberately spare: a
+   very short introduction, then a four-tile bento grid that is
+   the whole point of the page. Chrome (nav, footer, type,
+   colour, spacing) all come from the portfolio's shared CSS —
+   this file only styles the intro and the bento tiles, each of
+   which carries a handcrafted thumbnail.
+   ============================================================= */
+
+/* =============================================================
+   INTRO — one small heading, two short sentences. Nothing else.
+   ============================================================= */
+.home-hero {
+  padding-top: clamp(2rem, 6vw, 4rem);
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.home-hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.home-hero__text {
+  margin-top: var(--space-5);
+  max-width: 54ch;
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+}
+
+/* =============================================================
+   BENTO GRID — four projects. Two full-width tiles (Nerve top,
+   Stitch bottom) frame a two-up middle row (More KLYMB ·
+   Candidate Screening).
+   ============================================================= */
+.bento-section {
+  padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.85rem, 2vw, 1.5rem);
+}
+
+/* --- The tile: a link wrapping a thumbnail and a hover label -- */
+.bento__card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-soft);
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out);
+}
+
+.bento__card--wide {
+  grid-column: 1 / -1;
+}
+
+/* Generous, deliberately varied tile heights. The clamp floors
+   protect the compositions when the grid collapses to one column
+   on narrow screens (where vw-based heights would go too short). */
+.bento__card--nerve     { min-height: clamp(340px, 42vw, 500px); }
+.bento__card--klymb,
+.bento__card--screening { min-height: clamp(300px, 33vw, 420px); }
+.bento__card--stitch    { min-height: clamp(230px, 24vw, 320px); }
+
+.bento__card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-strong);
+}
+
+.bento__card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --- Thumbnail surface, filling the tile -------------------- */
+.bento__thumb {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Subtle darken on hover — signals the whole tile is a link. */
+.bento__thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.bento__card:hover .bento__thumb::after,
+.bento__card:focus-visible .bento__thumb::after {
+  opacity: 0.16;
+}
+
+/* --- Hover label: dark translucent chip, bottom-left -------- */
+.bento__label {
+  position: absolute;
+  left: clamp(0.85rem, 2vw, 1.35rem);
+  bottom: clamp(0.85rem, 2vw, 1.35rem);
+  z-index: 6;
+  padding: 0.4em 0.85em;
+  background: rgba(12, 11, 15, 0.62);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+}
+
+.bento__card:hover .bento__label,
+.bento__card:focus-visible .bento__label {
+  opacity: 1;
+  transform: none;
+}
+
+/* Two-line variant of the same chip — a project name with its
+   metadata under it. Used where the name alone doesn't say what
+   the project is. Identical chip, identical hover; only the
+   contents stack. */
+.bento__label--stack {
+  display: grid;
+  gap: 0.15em;
+  padding: 0.55em 0.9em;
+}
+
+.bento__label-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+.bento__label-meta {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* =============================================================
+   THUMB 01 — NERVE
+   A concept-board composition: three dark app screens scattered,
+   rotated a few degrees, cropped by the tile, at varied depth.
+   The screens' corners are transparent, so drop-shadow follows
+   the phone silhouette — no frames, no device mockups.
+   ============================================================= */
+.thumb--nerve {
+  background:
+    radial-gradient(120% 92% at 50% 130%, rgba(212, 112, 58, 0.13), transparent 60%),
+    #0B0A0E;
+}
+
+.nerve-shot {
+  position: absolute;
+  bottom: -14%;
+  height: 132%;
+  width: auto;
+  filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.72));
+}
+
+/* Left — behind, smaller, tilted away */
+.nerve-shot--left {
+  left: 4%;
+  height: 118%;
+  bottom: -16%;
+  transform: rotate(-7deg);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Centre — dominant, front, near-upright */
+.nerve-shot--center {
+  left: 50%;
+  height: 146%;
+  bottom: -8%;
+  transform: translateX(-50%) rotate(2deg);
+  z-index: 3;
+}
+
+/* Right — mid depth, tilted the other way */
+.nerve-shot--right {
+  right: 4%;
+  height: 122%;
+  bottom: -17%;
+  transform: rotate(7deg);
+  z-index: 2;
+  opacity: 0.94;
+}
+
+/* =============================================================
+   THUMB 02 — MORE KLYMB
+   The supplied transparent phone mockup, unaltered, centred over
+   a restrained crimson glow — the same ground the KLYMB Featured
+   Work thumbnail uses. The mockup stays the focal point.
+   ============================================================= */
+.thumb--klymb {
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  background:
+    radial-gradient(66% 52% at 50% 44%, rgba(245, 53, 79, 0.30), transparent 62%),
+    radial-gradient(130% 95% at 50% 122%, rgba(245, 53, 79, 0.10), transparent 55%),
+    #0E0D11;
+}
+
+.thumb--klymb img {
+  width: auto;
+  height: auto;
+  /* Square mockup — cap BOTH axes so the phone is never cropped by
+     the tile, whatever the tile's aspect works out to. */
+  max-width: 86%;
+  max-height: 92%;
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.5));
+}
+
+/* =============================================================
+   THUMB 03 — CANDIDATE SCREENING
+   The exact thumbnail the case study opens with, filled
+   edge-to-edge. The export is already a deliberate crop of the
+   dashboard's top-left — anchoring to the left keeps the title,
+   the filters and the first candidate rows intact, and lets the
+   tile take its crop from the same edge the export already cuts.
+   ============================================================= */
+.thumb--screening {
+  background: #F2F2F2; /* matches the export's own margin */
+}
+
+.thumb--screening img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* =============================================================
+   THUMB 04 — STITCH AI
+   A clean, hero-like panel: a soft blue-to-purple flow over near
+   black, one line of large minimal type. No logos, no BETA.
+   ============================================================= */
+.thumb--stitch {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(78% 130% at 16% 112%, rgba(129, 104, 255, 0.55), transparent 56%),
+    radial-gradient(70% 110% at 88% 6%, rgba(88, 66, 214, 0.42), transparent 55%),
+    linear-gradient(150deg, #0A0A12 0%, #131128 46%, #1B1740 100%);
+}
+
+/* A quiet diagonal light-sweep for soft lighting — no blobs. */
+.thumb--stitch::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.06) 50%, transparent 68%);
+  pointer-events: none;
+}
+
+.stitch-word {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-sans);
+  font-size: clamp(1.85rem, 5.2vw, 3.1rem);
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-shadow: 0 2px 30px rgba(129, 104, 255, 0.35);
+}
+
+/* =============================================================
+   RESPONSIVE — collapse to a single column; keep tiles roomy.
+   ============================================================= */
+@media (max-width: 720px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .bento__card {
+    grid-column: 1 / -1;
+  }
+
+  /* Two phones read better than three once the wide tile narrows. */
+  .nerve-shot--left {
+    display: none;
+  }
+
+  .nerve-shot--center {
+    left: 34%;
+  }
+
+  .nerve-shot--right {
+    right: 6%;
+  }
+}
