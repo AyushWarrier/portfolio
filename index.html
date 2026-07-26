@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier</title>
+  <meta name="description" content="Ayush Warrier — product designer and frontend engineer based in Mumbai. Selected product and web work, including KLYMB, ROPAN and Rootel." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/" />
+
+  <!-- Open Graph — og:title is a touch fuller than <title> for social
+       previews, where a bare name alone gives a stranger no context. -->
+  <meta property="og:title" content="Ayush Warrier — Product Designer &amp; Frontend Engineer" />
+  <meta property="og:description" content="Ayush Warrier — product designer and frontend engineer based in Mumbai. Selected product and web work, including KLYMB, ROPAN and Rootel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://warrierayush.me/" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier — Product Designer &amp; Frontend Engineer" />
+  <meta name="twitter:description" content="Ayush Warrier — product designer and frontend engineer based in Mumbai. Selected product and web work, including KLYMB, ROPAN and Rootel." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons / PWA -->
+  <link rel="icon" href="assets/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="assets/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Design system first, then components, then sections -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/work.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/playground-preview.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#work">Skip to work</a>
+
+  <!-- =========================================================
+       NAVIGATION — three balanced regions: brand, centered links,
+       resume. Resume is duplicated (desktop pill / mobile flyout
+       item) so only one is ever visible; see nav.css.
+       ========================================================= -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="#work">Work</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <!-- Playground is a separate destination -->
+          <li><a class="nav__link nav__link--alt" href="/playground">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        data-nav-toggle
+      >
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         HERO
+         A single editorial column, tightened to lead straight into
+         the work — KLYMB should already be peeking into view.
+         ========================================================= -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <h1 class="hero__heading" id="hero-heading" data-reveal-load style="--reveal-order:0">Hello,<br />I'm <span class="hero__accent">Ayush</span>.</h1>
+
+        <p class="hero__intro" data-reveal-load style="--reveal-order:1">
+          I like building products people actually <em class="hero__accent">enjoy</em>
+          using — from the first rough idea through to the final, shipped build.
+        </p>
+
+        <div class="hero__actions" data-reveal-load style="--reveal-order:2">
+          <a class="btn btn--primary" href="#about">
+            Find out more
+            <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 3.5v9M4.5 9 8 12.5 11.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <button class="btn btn--secondary" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         WORK
+         No heading — KLYMB, right below the hero, is the
+         introduction to the work. Five projects, one column, one
+         card. Every thumbnail reuses that project's own hero
+         composition and colours.
+         Order: KLYMB, Rootel, Wojewódka, RIVANT, ROPAN — importance
+         and professional growth, most recent/significant first.
+         Titles pair a descriptive value statement with the brand
+         name (secondary, see .work-card__brand in work.css). -->
+    <section class="section work" id="work" aria-label="Work">
+      <div class="container">
+        <div class="work__grid">
+
+          <!-- KLYMB — three screens on the same dark crimson ground
+               as the case study's own hero stage; Home dominant,
+               Challenges and Tracker supporting. Not lazy-loaded —
+               this is the introduction to the work. -->
+          <a class="work-card work-card--klymb" href="/klymb" data-reveal-load style="--reveal-order:3">
+            <div class="work-card__media work-card__media--app">
+              <div class="work-card__app-screens">
+                <div class="work-card__shot--app">
+                  <img
+                    src="assets/klymb/designs/challenges.png"
+                    alt="KLYMB challenges screen — crew battles and a live leaderboard"
+                    loading="eager"
+                  />
+                </div>
+                <div class="work-card__shot--app work-card__shot--lead">
+                  <img
+                    src="assets/klymb/designs/home_screen.png"
+                    alt="KLYMB app home screen — the daily Lifestyle Score"
+                    loading="eager"
+                    fetchpriority="high"
+                  />
+                </div>
+                <div class="work-card__shot--app">
+                  <img
+                    src="assets/klymb/designs/tracker_screen.png"
+                    alt="KLYMB tracker screen — daily completion and habit pillars"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Founding the Product Design of a Fitness Startup <span class="work-card__brand">· KLYMB</span></h2>
+              <p class="meta work-card__tags">
+                <span class="meta__item">Product Design</span>
+                <span class="meta__item">Mobile App</span>
+                <span class="meta__item">B2C Startup</span>
+              </p>
+            </div>
+          </a>
+
+          <!-- Rootel — blockchain platform site + design system -->
+          <a class="work-card work-card--rootel" href="/rootel" data-reveal-load style="--reveal-order:4">
+            <div class="work-card__media work-card__media--stage">
+              <div class="work-card__shot">
+                <img
+                  src="assets/rootel_ss.png"
+                  alt="Rootel blockchain platform website"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Designing a Blockchain Investment Platform <span class="work-card__brand">· Rootel</span></h2>
+              <p class="meta work-card__tags">
+                <span class="meta__item">Web Design</span>
+                <span class="meta__item">Blockchain Website</span>
+                <span class="meta__item">Freelance</span>
+              </p>
+            </div>
+          </a>
+
+          <!-- Wojewódka i Wspólnicy — law firm website (freelance) -->
+          <a class="work-card work-card--wojewodka" href="/wojewodka" data-reveal-load style="--reveal-order:5">
+            <div class="work-card__media work-card__media--stage">
+              <div class="work-card__shot">
+                <img
+                  src="assets/wojewodka/wojewodka_ss.png"
+                  alt="Wojewódka i Wspólnicy law firm website"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Redesigning an 11-Year-Old Law Firm Website <span class="work-card__brand">· Wojewódka i Wspólnicy</span></h2>
+              <p class="meta work-card__tags">
+                <span class="meta__item">Web Design</span>
+                <span class="meta__item">Law Firm</span>
+                <span class="meta__item">Freelance</span>
+              </p>
+            </div>
+          </a>
+
+          <!-- RIVANT Media — agency website (internship) -->
+          <a class="work-card work-card--rivant" href="/rivant" data-reveal-load style="--reveal-order:6">
+            <div class="work-card__media work-card__media--stage">
+              <div class="work-card__shot">
+                <img
+                  src="assets/rivant/rivant_ss.png"
+                  alt="RIVANT Media agency homepage"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Designing an Agency Website During My Internship <span class="work-card__brand">· RIVANT Media</span></h2>
+              <p class="meta work-card__tags">
+                <span class="meta__item">UI/UX</span>
+                <span class="meta__item">Agency Website</span>
+                <span class="meta__item">Internship</span>
+              </p>
+            </div>
+          </a>
+
+          <!-- ROPAN Yoga Studio — the landing page's own hero, cropped
+               to its top the same way the case study crops it -->
+          <a class="work-card work-card--ropan" href="/ropan" data-reveal-load style="--reveal-order:7">
+            <div class="work-card__media work-card__media--stage">
+              <div class="work-card__shot">
+                <img
+                  src="assets/ropan/ropan-hero-section.png"
+                  alt="ROPAN Yoga Studio landing page — hero section"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Creating a Landing Page Concept for a Yoga Studio <span class="work-card__brand">· ROPAN</span></h2>
+              <p class="meta work-card__tags">
+                <span class="meta__item">UI Design</span>
+                <span class="meta__item">Landing Page</span>
+                <span class="meta__item">Brand Identity</span>
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ABOUT
+         Human and personal. Prose left; current focus right.
+         ========================================================= -->
+    <section class="section about" id="about" aria-label="About">
+      <div class="container about__inner">
+        <div class="about__main" data-reveal-load style="--reveal-order:8">
+          <p class="eyebrow">About</p>
+          <div class="about__prose">
+            <p>
+              I'm <span class="hero__accent">Ayush</span> — twenty, and technically
+              a developer by degree, though most of what I actually do lives on
+              the design side.
+            </p>
+            <p>
+              I like building things people genuinely enjoy using, not just
+              things that work. That usually means getting involved
+              early—questioning a flow before it's locked in, noticing friction
+              nobody's flagged yet, and thinking about what's quietly going to
+              hurt retention before it becomes a problem.
+            </p>
+            <p>
+              I've mostly worked by myself or in small teams, which has pushed
+              me to learn quickly and wear more hats than my title suggests. In
+              a small team, ideas move faster, and I get to do more than push
+              pixels—at KLYMB that meant sitting close to product decisions,
+              not just the screens that came after them.
+            </p>
+            <p>
+              Outside of work I'm usually gaming, messing around with AI tools,
+              out on a motorcycle ride, or somewhere I haven't been before.
+            </p>
+          </div>
+        </div>
+
+        <aside class="about__aside" data-reveal-load style="--reveal-order:8">
+          <div class="about__block">
+            <h2 class="about__block-title">Current focus</h2>
+            <ul class="about__list">
+              <li>Product Design</li>
+              <li>UI / UX Design</li>
+              <li>Product Thinking</li>
+              <li>Frontend Development</li>
+              <li>Vibe Coding</li>
+              <li>AI Prompt Engineering</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         EXPERIENCE
+         Editorial timeline. What each role actually taught me,
+         not a bullet-point resume.
+         ========================================================= -->
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head section-head--roomy" data-reveal-load style="--reveal-order:9">
+          <p class="eyebrow">Experience</p>
+          <h2 class="section-title" id="experience-title">Where I've worked</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal-load style="--reveal-order:10">
+            <div class="timeline__period">Mar 2026 — Present · Paused · Awaiting Funding</div>
+            <div class="timeline__detail">
+              <h3 class="timeline__role">Founding Product Designer</h3>
+              <p class="timeline__company">KLYMB</p>
+              <p class="timeline__note">
+                Came in as the first product designer and ended up shaping more
+                than screens — user flows, retention thinking, where the
+                product should go next. Built the design system from scratch,
+                tested it through TestFlight with the founders, and stayed
+                close to engineering through implementation so what shipped
+                matched what was designed.
+              </p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal-load style="--reveal-order:10">
+            <div class="timeline__period">Nov 2024 — Mar 2025</div>
+            <div class="timeline__detail">
+              <h3 class="timeline__role">Web Designer</h3>
+              <p class="timeline__company">Freelance</p>
+              <p class="timeline__note">
+                Designed and shipped production websites for Wojewódka i
+                Wspólnicy and Rootel, working directly with the clients instead
+                of through a middle layer. Scope shifted on both — good
+                practice in communication, and a fast lesson that real projects
+                rarely move in a straight line.
+              </p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal-load style="--reveal-order:10">
+            <div class="timeline__period">Jun 2024 — Sep 2024</div>
+            <div class="timeline__detail">
+              <h3 class="timeline__role">UI/UX Design Intern</h3>
+              <p class="timeline__company">RIVANT Media</p>
+              <p class="timeline__note">
+                My first real internship — real clients, a real handoff
+                process, and a production workflow no tutorial prepares you
+                for. Took work from wireframes through to high-fidelity UI,
+                then learned what it actually takes to get a design safely into
+                a developer's hands.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PLAYGROUND PREVIEW
+         Not another portfolio section — a cropped window into the
+         Playground, for visitors (mobile especially) who might
+         otherwise miss that it exists. Header mirrors Experience;
+         the tiles reuse the Playground bento's own artwork and
+         tokens so this reads as a continuation of that page.
+         ========================================================= -->
+    <section class="section playground-preview" id="playground" aria-labelledby="playground-preview-title">
+      <div class="container">
+        <header class="section-head section-head--roomy pg-preview-head" data-reveal-load style="--reveal-order:11">
+          <div>
+            <p class="eyebrow">Playground</p>
+            <h2 class="section-title" id="playground-preview-title">A Creative Space</h2>
+          </div>
+          <a class="link pg-preview-head__cta" href="/playground">
+            View All
+            <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3.5 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </header>
+
+        <div class="pg-preview" data-reveal-load style="--reveal-order:12">
+
+          <!-- Nerve — the project's own wordmark, on the same dark
+               ground its Playground bento tile uses -->
+          <a class="pg-preview__tile pg-preview__tile--nerve" href="/playground/nerve" aria-label="Nerve — open project">
+            <span class="pg-preview__nerve-word">Nerve<span class="nerve-dot">.</span></span>
+          </a>
+
+          <!-- More KLYMB — the same supplied mockup as the Playground page -->
+          <a class="pg-preview__tile pg-preview__tile--klymb" href="/playground/more-klymb" aria-label="More KLYMB — open project">
+            <img src="playground/more-klymb/assets/more-klymb%28thumbnail%29.png" alt="" loading="eager" />
+          </a>
+
+          <!-- Stitch AI — the same branded panel as the Playground page -->
+          <a class="pg-preview__tile pg-preview__tile--stitch" href="/playground/testing-stitch-ai" aria-label="Testing with Stitch AI — open project">
+            <span class="pg-preview__stitch-word">Stitch AI</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER — minimal. Links left, a quiet note right.
+       ========================================================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner" data-reveal-load style="--reveal-order:13">
+      <ul class="site-footer__links">
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/ayush-warrier/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <a class="link" href="assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </li>
+        <li>
+          <button class="link site-footer__copy" type="button" data-copy-email="warrierayush@gmail.com" aria-label="Copy email address, warrierayush@gmail.com">
+            warrierayush@gmail.com
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3" />
+              <path d="M10 6V4.5A1.5 1.5 0 0 0 8.5 3h-4A1.5 1.5 0 0 0 3 4.5v4A1.5 1.5 0 0 0 4.5 10H6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <p class="site-footer__note">Vibe coded</p>
+    </div>
+  </footer>
+
+  <!-- Toast — populated and shown by js/main.js -->
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <!-- Modules — deferred, order-independent. Reveal is pure CSS on
+       this page (see [data-reveal-load] in base.css) — no reveal.js
+       here; that script is only for the case-study/live-project
+       pages' scroll-triggered chapter reveals. -->
+  <script src="js/nav.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

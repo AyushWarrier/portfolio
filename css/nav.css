@@ -1,0 +1,202 @@
+/* =============================================================
+   NAVIGATION
+   Sticky, quiet, unobtrusive. A subtle surface appears only
+   once the page has been scrolled.
+   ============================================================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: saturate(1.2) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+/* Applied by JS once the page is scrolled */
+.nav.is-scrolled {
+  border-bottom-color: var(--color-border);
+}
+
+/* Three balanced regions: brand (fixed), links (centered in the
+   remaining space), resume (fixed) — not a two-child space-between,
+   which reads as brand-left/links-right rather than truly centered. */
+.nav__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Wordmark — "aw#". Typography only; the trailing # is the one
+   persistent spot of accent in the page chrome. Becomes the favicon. */
+.nav__brand {
+  flex: 0 0 auto;
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.04em;
+  font-size: var(--text-lg);
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.nav__brand-mark {
+  color: var(--color-accent);
+}
+
+/* --- Links — centered in the flexible middle region --------- */
+.nav__links {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.nav__link {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  padding-block: var(--space-2);
+  transition: color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+.nav__link:hover {
+  color: var(--color-text);
+}
+
+/* Active section indicator — the one place nav chrome carries the accent */
+.nav__link.is-active {
+  color: var(--color-accent);
+}
+
+/* Playground reads as a separate destination */
+.nav__link--alt {
+  color: var(--color-text-secondary);
+}
+
+/* Resume exists twice in the markup: a desktop pill pinned to the
+   right edge, and a copy inside the mobile flyout. Only one is ever
+   visible — display:none removes the other from focus/AT order. */
+.nav__resume-mobile {
+  display: none;
+}
+
+.nav__resume-desktop {
+  flex: 0 0 auto;
+  margin-left: var(--space-4);
+}
+
+.nav__resume {
+  display: inline-flex;
+}
+
+/* --- Mobile toggle ----------------------------------------- */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__toggle-bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  margin-inline: auto;
+  background: var(--color-text);
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+/* Toggle → close (X) when open */
+.nav__toggle[aria-expanded='true'] .nav__toggle-bar:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.nav__toggle[aria-expanded='true'] .nav__toggle-bar:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+/* --- Responsive: mobile menu ------------------------------- */
+@media (max-width: 720px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__resume-desktop {
+    display: none;
+  }
+
+  /* .nav__links goes to position:fixed below, which removes it
+     from .nav__inner's flex flow — without this, brand and toggle
+     are the only two flex items left and collapse together at the
+     start of the row instead of sitting at opposite ends. */
+  .nav__inner {
+    justify-content: space-between;
+  }
+
+  .nav__links {
+    position: fixed;
+    inset: var(--nav-height) 0 auto 0;
+    justify-content: normal;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    /* Collapsed by default; JS toggles .is-open */
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform var(--dur) var(--ease),
+      opacity var(--dur) var(--ease);
+  }
+
+  .nav__links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav__list {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-7) var(--gutter) var(--space-6);
+  }
+
+  .nav__link {
+    display: block;
+    padding-block: var(--space-5);
+    font-size: var(--text-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav__resume-mobile {
+    display: block;
+    margin-top: var(--space-6);
+  }
+
+  /* Full-width so its edges line up with the nav items above it,
+     which fill the same padded list width. */
+  .nav__resume-mobile .nav__resume {
+    width: 100%;
+    justify-content: center;
+  }
+}

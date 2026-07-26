@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ayush Warrier | KLYMB</title>
+  <meta name="description" content="A fitness and lifestyle app I designed from the ground up as founding product designer — the product thinking, the design system, and the build, from idea to TestFlight." />
+  <meta name="author" content="Ayush Warrier" />
+  <link rel="canonical" href="https://warrierayush.me/klymb" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ayush Warrier | KLYMB" />
+  <meta property="og:description" content="A fitness and lifestyle app I designed from the ground up as founding product designer — the product thinking, the design system, and the build, from idea to TestFlight." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://warrierayush.me/klymb" />
+  <meta property="og:image" content="https://warrierayush.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ayush Warrier" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Warrier | KLYMB" />
+  <meta name="twitter:description" content="A fitness and lifestyle app I designed from the ground up as founding product designer — the product thinking, the design system, and the build, from idea to TestFlight." />
+  <meta name="twitter:image" content="https://warrierayush.me/assets/og-image.png" />
+
+  <!-- Icons / PWA -->
+  <link rel="icon" href="../assets/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="../assets/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="theme-color" content="#FCFBF8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/klymb.css" />
+
+  <!--
+    KLYMB CASE STUDY.
+    Light editorial page with dark product "stages". Evidence-driven:
+    every section shows real work from the Portfolio_V1 assets — no
+    invented UI. Order follows the story: product thinking first, then
+    the product, the system, craft, engineering and brand.
+  -->
+</head>
+
+<body class="cs">
+  <a class="skip-link" href="#k-hero">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/" aria-label="Ayush Warrier — home">aw<span class="nav__brand-mark">#</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <ul class="nav__list" data-nav-list>
+          <li><a class="nav__link" href="/#work">Work</a></li>
+          <li><a class="nav__link" href="/#about">About</a></li>
+          <li><a class="nav__link nav__link--alt" href="/playground">Playground</a></li>
+          <li class="nav__resume-mobile">
+            <a class="btn btn--accent nav__resume" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+              Resume
+              <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--accent nav__resume nav__resume-desktop" href="../assets/Ayush_Warrier_Resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4.5 2.5h4.586a1 1 0 0 1 .707.293l1.914 1.914a1 1 0 0 1 .293.707V13.5a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+          <path d="M9 2.5V5a1 1 0 0 0 1 1h2.4" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══ 00 · HERO ═══ -->
+    <section class="k-hero" id="k-hero" aria-labelledby="k-hero-title">
+      <div class="container">
+        <div class="k-hero__masthead" data-reveal>
+          <p class="k-hero__eyebrow">Case Study</p>
+          <h1 class="k-hero__title" id="k-hero-title">KLYMB</h1>
+          <p class="k-hero__oneline">
+            A fitness and lifestyle app built around one daily score. I was the
+            founding product designer, shaping the product and building its
+            design system from scratch.
+          </p>
+          <dl class="k-hero__meta">
+            <div><dt>Role</dt><dd>Founding Product Designer</dd></div>
+            <div><dt>Type</dt><dd>B2C startup</dd></div>
+            <div><dt>Platform</dt><dd>Mobile app</dd></div>
+            <div><dt>Timeline</dt><dd>2026</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="k-hero__stage" data-reveal>
+          <div class="k-hero__screens">
+            <figure class="screen screen--crop k-hero__screen k-hero__screen--side" style="--crop: 9/16;">
+              <img src="../assets/klymb/designs/challenges.png" alt="KLYMB challenges screen — crew battles and a live leaderboard" loading="eager" />
+            </figure>
+            <figure class="screen screen--crop k-hero__screen k-hero__screen--lead" style="--crop: 9/17.5;">
+              <img src="../assets/klymb/designs/home_screen.png" alt="KLYMB home screen — the daily Lifestyle Score with habit progress and live health stats" loading="eager" fetchpriority="high" />
+            </figure>
+            <figure class="screen screen--crop k-hero__screen k-hero__screen--side" style="--crop: 9/16;">
+              <img src="../assets/klymb/designs/tracker_screen.png" alt="KLYMB tracker screen — daily completion and habit pillars" loading="eager" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · PRODUCT THINKING ═══ -->
+    <section class="chapter" id="thinking" aria-labelledby="thinking-title">
+      <div class="container">
+        <header class="chapter__head" data-reveal>
+          <span class="chapter__index">01</span>
+          <span class="chapter__eyebrow">Product thinking</span>
+          <h2 class="chapter__title" id="thinking-title">Thinking beyond the screen</h2>
+          <p class="chapter__lead">
+            Some of the most useful work I did here wasn't a polished screen —
+            it was noticing what the product needed and raising it early.
+          </p>
+        </header>
+      </div>
+
+      <!-- Onboarding — a UX problem I raised -->
+      <div class="moment" data-reveal>
+        <div class="container">
+          <div class="pt__lead">
+            <p class="insight__kicker">A problem I raised</p>
+            <p class="insight__statement">Five full screens stood between a new user and the app.</p>
+            <div class="pt__do">
+              <p class="pt__do-label">What I did</p>
+              <p class="pt__do-text">
+                I flagged it to the founders as a retention risk, not a polish
+                issue — five screens is a lot to sit through before you've even
+                opened the app.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="stage onboarding-stage">
+            <div class="onboarding-set">
+              <figure class="screen"><img src="../assets/klymb/designs/onboarding_1.png" alt="Onboarding screen 1 — workout tracking" loading="lazy" /></figure>
+              <figure class="screen"><img src="../assets/klymb/designs/onboarding_2.png" alt="Onboarding screen 2 — nutrition" loading="lazy" /></figure>
+              <figure class="screen"><img src="../assets/klymb/designs/onboarding_3.png" alt="Onboarding screen 3 — sleep" loading="lazy" /></figure>
+              <figure class="screen"><img src="../assets/klymb/designs/onboarding_4.png" alt="Onboarding screen 4 — hydration" loading="lazy" /></figure>
+              <figure class="screen"><img src="../assets/klymb/designs/onboarding_5.png" alt="Onboarding screen 5 — XP and leaderboard" loading="lazy" /></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product evolution — the score, renamed through iteration -->
+      <div class="moment" data-reveal>
+        <div class="container">
+          <div class="pt__lead pt__lead--center">
+            <p class="insight__kicker">Product evolution</p>
+            <p class="insight__statement">We didn't get the core score's name right the first time.</p>
+          </div>
+          <div class="stage">
+            <div class="compare">
+              <div class="compare__item">
+                <figure class="screen screen--crop" style="--crop: 4/5;">
+                  <img src="../assets/klymb/wireframes/wireframe-home_screen.png" alt="Earlier home design — the score labelled Daily Potential" loading="lazy" />
+                </figure>
+                <span class="compare__tag">Earlier — &ldquo;Daily Potential&rdquo;</span>
+              </div>
+              <div class="compare__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="compare__item">
+                <figure class="screen screen--crop" style="--crop: 4/5;">
+                  <img src="../assets/klymb/designs/home_screen.png" alt="Final home design — the score renamed Lifestyle Score, with habit progress" loading="lazy" />
+                </figure>
+                <span class="compare__tag">Final — &ldquo;Lifestyle Score&rdquo;</span>
+              </div>
+            </div>
+          </div>
+          <p class="moment__caption">
+            &ldquo;Daily Potential&rdquo; made it sound like something you hadn't
+            earned yet. &ldquo;Lifestyle Score&rdquo; reads as the whole day,
+            good or bad. Small change, but it shifted how the entire screen
+            felt.
+          </p>
+        </div>
+      </div>
+
+      <!-- A product idea I proposed — the mascot (side-by-side: text leads, artifact follows) -->
+      <div class="moment" data-reveal>
+        <div class="container">
+          <div class="pt pt--mascot">
+            <div class="pt__lead">
+              <p class="insight__kicker">An idea I proposed</p>
+              <p class="insight__statement">Turning the logo into a mascot.</p>
+              <p class="insight__text">
+                In a founder discussion I suggested turning the logo's climbing
+                figure into a full character — something with personality
+                outside the app, for share cards and social. It landed well,
+                but we parked it until after the MVP. Not final artwork, just
+                an idea I threw out there.
+              </p>
+            </div>
+            <div class="proposal">
+              <figure class="proposal__glyph">
+                <img src="../assets/klymb/branding/icon_logo.svg" alt="The KLYMB logo — a climbing figure forming a K" loading="lazy" />
+              </figure>
+              <span class="proposal__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <figure class="proposal__glyph proposal__glyph--concept">
+                <img src="../assets/klymb/branding/mascot_concept.svg" alt="An early mascot concept extending the logo figure into a character" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · CORE EXPERIENCE ═══ -->
+    <section class="chapter" id="product" aria-labelledby="product-title">
+      <div class="container">
+        <header class="chapter__head" data-reveal>
+          <span class="chapter__index">02</span>
+          <span class="chapter__eyebrow">The product</span>
+          <h2 class="chapter__title" id="product-title">The experience, up close</h2>
+          <p class="chapter__lead">
+            Home and the tracker are where people spend most of their time in
+            the app. Here they are in full — not cropped down to fit a layout.
+          </p>
+        </header>
+
+        <div class="stage" data-reveal>
+          <div class="exp__screens">
+            <figure class="exp__screen">
+              <p class="stage__label">Home</p>
+              <span class="screen screen--tall"><img src="../assets/klymb/designs/home_screen.png" alt="The full KLYMB home screen — Lifestyle Score, water, nutrition, live health stats and trackers" loading="lazy" /></span>
+            </figure>
+            <figure class="exp__screen">
+              <p class="stage__label">Tracker</p>
+              <span class="screen screen--tall"><img src="../assets/klymb/designs/tracker_screen.png" alt="The full KLYMB tracker screen — daily completion, habit pillars, steps and timeline" loading="lazy" /></span>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutrition — the two ways to log a meal -->
+      <div class="container">
+        <div class="nutrition-text" data-reveal>
+          <p class="feature__kicker">Nutrition</p>
+          <h3 class="feature__title">Two ways to log a meal, one default</h3>
+          <p class="feature__note">
+            Scanning a barcode fills in the nutrition instantly — no typing, no
+            searching. If there's no barcode, you can search or log a meal by
+            hand instead. I made scanning the default because the less friction
+            there is, the more likely people actually keep the habit up.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="nutrition-showcase" data-reveal>
+          <figure class="screen"><img src="../assets/klymb/designs/nutrition_scan.png" alt="KLYMB barcode scanner — scan packaged food to look up nutrition instantly" loading="lazy" /></figure>
+          <figure class="screen"><img src="../assets/klymb/designs/nutrition_log.png" alt="KLYMB meal log — search foods, browse recent meals, or log a custom meal" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · DESIGN SYSTEM ═══ -->
+    <section class="chapter" id="system" aria-labelledby="system-title">
+      <div class="container">
+        <header class="chapter__head" data-reveal>
+          <span class="chapter__index">03</span>
+          <span class="chapter__eyebrow">Design system</span>
+          <h2 class="chapter__title" id="system-title">One pattern, every category</h2>
+          <p class="chapter__lead">
+            As the product grew, I leaned on one shared set of components
+            instead of custom-building each screen — nutrition, hydration,
+            sleep, whatever came next just reused the same card.
+          </p>
+        </header>
+
+        <div class="stage" data-reveal>
+          <div class="ds">
+            <div class="ds-group">
+              <p class="ds-group__label">Forms &amp; selection</p>
+              <div class="ds-grid ds-grid--forms">
+                <div class="ds-item"><img src="../assets/klymb/components/input-email.png" alt="Email input field" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/input-password.png" alt="Password input field" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/input-select-fitness_goal.png" alt="Fitness-goal selection card" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/input-select-hydration_goal.png" alt="Hydration-goal selection card" loading="lazy" /></div>
+                <div class="ds-item ds-item--span"><img src="../assets/klymb/components/button.png" alt="Primary call-to-action button" loading="lazy" /></div>
+              </div>
+            </div>
+
+            <div class="ds-group">
+              <p class="ds-group__label">Navigation · one bar, every state</p>
+              <div class="ds-grid ds-grid--nav">
+                <div class="ds-item"><img src="../assets/klymb/components/navbar-home.png" alt="Bottom navigation — Home active" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/navbar-tracker.png" alt="Bottom navigation — Tracker active" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/navbar-leaderboard.png" alt="Bottom navigation — Board active" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/navbar-challenges.png" alt="Bottom navigation — Challenges active" loading="lazy" /></div>
+              </div>
+            </div>
+
+            <div class="ds-group">
+              <p class="ds-group__label">Weekly charts · one chart, every metric</p>
+              <div class="ds-grid ds-grid--charts">
+                <div class="ds-item"><img src="../assets/klymb/components/card-weekly_chart-nutrition.png" alt="Weekly nutrition chart" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-weekly_chart-hydration.png" alt="Weekly hydration chart" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-weekly_chart-sleep.png" alt="Weekly sleep chart" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-weekly_chart-steps.png" alt="Weekly steps chart" loading="lazy" /></div>
+              </div>
+            </div>
+
+            <div class="ds-group">
+              <p class="ds-group__label">Metric cards · one card, every category</p>
+              <div class="ds-grid ds-grid--cards">
+                <div class="ds-item"><img src="../assets/klymb/components/card_lifestyle_score.png" alt="Lifestyle score card" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-nutrition.png" alt="Nutrition / macros card" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-hydration.png" alt="Water intake card" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-sleep.png" alt="Sleep card" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-xp_tracker.png" alt="XP and league card" loading="lazy" /></div>
+                <div class="ds-item"><img src="../assets/klymb/components/card-calories.png" alt="Macros breakdown card" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 05 · ICONS ═══ -->
+    <section class="chapter" id="icons" aria-labelledby="icons-title">
+      <div class="container">
+        <header class="chapter__head chapter__head--center" data-reveal>
+          <span class="chapter__index">04</span>
+          <span class="chapter__eyebrow">Craft</span>
+          <h2 class="chapter__title" id="icons-title">A custom icon set</h2>
+          <p class="chapter__lead">
+            Every icon here is one I drew myself — same stroke weight, same
+            geometry, same style throughout.
+          </p>
+        </header>
+
+        <figure class="icons__sheet" data-reveal>
+          <img src="../assets/klymb/more/icons.png" alt="The full KLYMB custom icon library at a consistent stroke and geometry" loading="lazy" />
+          <figcaption class="icons__caption">Over 200 icons, drawn to one system.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ 06 · BEYOND FIGMA ═══ -->
+    <section class="chapter" id="engineering" aria-labelledby="engineering-title">
+      <div class="container">
+        <header class="chapter__head" data-reveal>
+          <span class="chapter__index">05</span>
+          <span class="chapter__eyebrow">Beyond Figma</span>
+          <h2 class="chapter__title" id="engineering-title">The work didn't stop at handoff</h2>
+          <p class="chapter__lead">
+            I didn't just hand off the designs and move on. I ran builds
+            through TestFlight myself, found bugs, wrote them up, and worked
+            with the developer until each one actually got fixed.
+          </p>
+        </header>
+
+        <figure class="tracker-sheet" data-reveal>
+          <img src="../assets/klymb/engineering/bug_tracker.png" alt="My KLYMB bug tracker — issue type, description, status and developer notes across dozens of real entries" loading="lazy" />
+          <figcaption class="tracker-sheet__caption">
+            My actual bug tracker — every issue categorised, a status for each
+            one, and a running back-and-forth with engineering until it was
+            fixed.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ 07 · SHARE CARDS ═══ -->
+    <section class="chapter" id="brand" aria-labelledby="brand-title">
+      <div class="container">
+        <header class="chapter__head" data-reveal>
+          <span class="chapter__index">06</span>
+          <span class="chapter__eyebrow">Brand</span>
+          <h2 class="chapter__title" id="brand-title">Designed to be shared</h2>
+          <p class="chapter__lead">
+            I designed these so a finished workout or a good day's numbers
+            actually felt worth posting — and so KLYMB stayed recognisable
+            wherever they ended up.
+          </p>
+        </header>
+
+        <div class="stage" data-reveal>
+          <div class="share-set">
+            <figure class="share-card"><img src="../assets/klymb/designs/share_card-running.png" alt="KLYMB running share card" loading="lazy" /></figure>
+            <figure class="share-card"><img src="../assets/klymb/designs/share_card-steps.png" alt="KLYMB steps share card" loading="lazy" /></figure>
+            <figure class="share-card share-card--wide"><img src="../assets/klymb/designs/share_card-nutrition.png" alt="KLYMB nutrition share card" loading="lazy" /></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 08 · REFLECTION ═══ -->
+    <section class="chapter chapter--tight reflection" aria-labelledby="reflection-title">
+      <div class="container">
+        <div class="reflection__inner" data-reveal>
+          <span class="chapter__eyebrow">Reflection</span>
+          <h2 class="reflection__title" id="reflection-title">What KLYMB taught me</h2>
+          <p class="reflection__text">
+            KLYMB wasn't your typical case study. Being on an early-stage team
+            meant working right alongside the founders and tech lead to
+            figure out real problems, like how to keep users coming back. I
+            wore a lot of hats — jumping from core UX, to learning how to draw
+            icons, to mocking up share cards.
+          </p>
+          <p class="reflection__text">
+            That fast pace taught me that product design doesn't end in
+            Figma. The work that actually mattered most — spotting issues
+            early, keeping things organized as we grew, and sitting with
+            engineering during the build — was rarely about just
+            &ldquo;designing screens.&rdquo; And that's exactly the kind of
+            designer I want to be.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="container project-nav__inner">
+      <a class="project-nav__next" href="/ropan">
+        <span class="project-nav__next-label">Next project</span>
+        <span class="project-nav__next-name">
+          ROPAN Yoga Studio
+          <svg class="btn__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M4 8h8M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="../js/nav.js" defer></script>
+  <script src="../js/reveal.js" defer></script>
+</body>
+</html>

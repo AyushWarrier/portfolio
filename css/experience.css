@@ -1,0 +1,70 @@
+/* =============================================================
+   EXPERIENCE
+   Compact timeline. Career progression readable in seconds.
+   No paragraphs — one line of responsibility per role.
+   ============================================================= */
+
+/* Top: was still the generic section padding (~4-8rem), stacking
+   with About's own bottom padding and leaving the two sections
+   feeling disconnected. Bottom: the footer was reading as detached
+   from the page; most of that gap was here, plus the footer's own
+   margin-top stacking on top of it (see contact.css). */
+.experience {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.timeline {
+  display: grid;
+  gap: 0;
+  max-width: 760px;
+}
+
+.timeline__item {
+  display: grid;
+  gap: var(--space-2);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.timeline__item:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timeline__period {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline__role {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.timeline__company {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: var(--weight-medium);
+}
+
+.timeline__note {
+  margin-top: var(--space-1);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  max-width: var(--measure);
+}
+
+/* --- Desktop: period sits beside the detail ---------------- */
+@media (min-width: 720px) {
+  .timeline__item {
+    grid-template-columns: 180px 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  .timeline__period {
+    padding-top: 2px;
+  }
+}

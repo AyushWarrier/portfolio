@@ -1,0 +1,82 @@
+/* =============================================================
+   LIVE PROJECTS
+   A calm grid of commercial work. Vertical cards, landscape
+   thumbnails, honest metadata. The live site is the proof.
+   ============================================================= */
+
+.live__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.live-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-card__media {
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.live-card__media img {
+  object-position: top center;
+}
+
+.live-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  /* Fill the equal-height card so the link bottom-aligns across
+     cards with summaries of different lengths. */
+  flex: 1;
+}
+
+.live-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.live-card__summary {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.live-card__tags {
+  margin-top: var(--space-1);
+}
+
+/* Push the link to the bottom so cards of varying text align */
+.live-card__link {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  align-self: flex-start;
+}
+
+/* --- Hover: gentle lift + image scale ---------------------- */
+@media (hover: hover) {
+  .live-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-md);
+  }
+
+  .live-card:hover .live-card__media img {
+    transform: scale(1.03);
+  }
+}
+
+/* --- Responsive columns ------------------------------------ */
+@media (min-width: 640px) {
+  .live__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .live__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

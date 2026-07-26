@@ -1,0 +1,71 @@
+/* =============================================================
+   SIMPLE PAGE
+   Shared layout for standalone, one-screen pages — Playground's
+   "Coming Soon" placeholder and the 404 page. Same nav + footer
+   shell as every other page; the middle fills the space between
+   them so the page needs no scrolling.
+   ============================================================= */
+
+.simple {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.simple main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.simple .site-footer {
+  flex-shrink: 0;
+}
+
+.simple-hero {
+  width: 100%;
+  padding-block: var(--space-8);
+}
+
+/* Left-aligned at the container's own edge, like Hero and About —
+   not centered. (Previously this element also carried the
+   .container class, so it inherited .container's own
+   margin-inline:auto while ALSO being narrowed by max-width here,
+   which centered a narrow column instead of left-aligning it —
+   the "floating in the middle" bug. .container now wraps this
+   from the outside instead; see playground.html / 404.html.) */
+.simple-hero__inner {
+  max-width: 52ch;
+  text-align: left;
+}
+
+/* Large, pale numeral — the same treatment the case studies use
+   for their chapter indices. Only the 404 page uses this. */
+.simple-hero__index {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-weight: var(--weight-regular);
+  line-height: 1;
+  color: var(--color-surface);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.simple-hero__heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--leading-tight);
+}
+
+.simple-hero__text {
+  margin-top: var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+.simple-hero__actions {
+  margin-top: var(--space-6);
+}

@@ -1,0 +1,241 @@
+/* =============================================================
+   WORK
+   One section, five projects, one column — cards stacked full
+   content-width. Every thumbnail reuses the exact background
+   treatment and screenshot styling from that project's own case
+   study / live-project page, so the homepage and the pages it
+   links to read as the same visual set rather than a generic
+   grid of screenshots.
+   ============================================================= */
+
+/* Work has no heading of its own — KLYMB, right below the hero,
+   is the introduction to the work. Only the top/bottom padding is
+   tightened here; the gap between cards is untouched. */
+.work {
+  padding-top: clamp(1rem, 2.5vw, 2rem);
+  padding-bottom: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.work__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.work-card {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* --- Thumbnail frame — one fixed aspect ratio for every card,
+   so app screens and website screenshots align in one rhythm --- */
+.work-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--stage-bg, var(--color-surface-soft));
+}
+
+/* --- Website screenshots: tinted stage + a rounded, cropped
+   "shot" grounded into the bottom edge — the exact composition
+   used in klymb.css / live-project.css's own hero stages. --- */
+.work-card__media--stage {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 2rem) 0;
+}
+
+.work-card__shot {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transform: translateY(clamp(8px, 3vw, 18px));
+}
+
+.work-card__shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* --- App screens (KLYMB): three screens on the same dark crimson
+   ground as the case study's own hero stage — same structure
+   (outer padded stage + inner screens row), same flex-basis
+   tokens, same breakpoint, same screen border. A dominant, centred
+   Home screen flanked by Challenges and Tracker. Reuses the same
+   exported Figma screens and cropping technique the case study
+   uses for its own (very tall) captures; no device mockup, no new
+   artwork. --- */
+.work-card__media--app {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem) 0;
+}
+
+.work-card__app-screens {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(0.5rem, 1.8vw, 1.4rem);
+  width: 100%;
+}
+
+/* Self-contained sizing (no width from a shared base class) so
+   aspect-ratio has a single missing dimension to fill — layering
+   width:100% here would make aspect-ratio a no-op.
+
+   Percentage flex-basis rather than the case study's fixed px:
+   this frame is aspect-locked at 16/10 (shared with every other
+   project card, not something this pass touches), unlike the case
+   study's own free-height stage — the exact px values there would
+   either overflow a narrow card or leave no top padding on a wide
+   one. Percentages scale with the card itself, so the same visual
+   proportions (dominant centred screen, comfortable top padding)
+   hold at any width. Everything else — the gap formula, the
+   padding, the border, the lead/side relationship — is unchanged
+   from the case study.
+
+   Side/lead scaled up ~15% from their original 20%/26% (same 1.3x
+   ratio preserved) so the screens read as closer and more
+   confident, without touching the padding or gap that place them
+   within the frame. */
+.work-card__shot--app {
+  flex: 0 1 23%;
+  aspect-ratio: 9 / 17.5;
+  /* A touch softer than --radius-md (10px), short of the outer
+     frame's --radius-lg (16px) — closer to a modern phone's actual
+     corner proportions at this scale. */
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  /* The same subtle grey outline the case study's own .screen
+     class uses (--stage-line), separating the UI from the dark
+     ground. No added shadow/glow beyond what was already there. */
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: var(--shadow-md);
+  opacity: 0.92;
+}
+
+/* Home — the dominant, centred screen */
+.work-card__shot--lead {
+  flex-basis: 30%;
+  z-index: 2;
+  opacity: 1;
+  box-shadow: var(--shadow-lg);
+}
+
+.work-card__shot--app img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* A faint engineering grid on RIVANT's dark stage, echoing its
+   own project page. Kept very quiet. */
+.work-card--rivant .work-card__media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(80% 80% at 50% 40%, #000 30%, transparent 78%);
+          mask-image: radial-gradient(80% 80% at 50% 40%, #000 30%, transparent 78%);
+  pointer-events: none;
+}
+
+/* --- Per-project identity: stage ground + tag colour, sampled
+   from each brand, matching the same tokens each project's own
+   page already uses. --- */
+.work-card--klymb {
+  --stage-bg:
+    radial-gradient(78% 60% at 50% 6%, rgba(245, 53, 79, 0.28), transparent 60%),
+    radial-gradient(130% 90% at 50% 118%, rgba(245, 53, 79, 0.12), transparent 55%),
+    #0E0D11;
+  --tag-color: #E8002D;
+}
+
+.work-card--ropan {
+  --stage-bg:
+    radial-gradient(92% 74% at 50% 0%, rgba(59, 30, 107, 0.14), transparent 62%),
+    #EFEAF6;
+  /* Darkened from #FFA907 — the original failed WCAG AA (1.86:1)
+     against the page background. Same hue, 4.9:1. */
+  --tag-color: #996300;
+}
+
+.work-card--rootel {
+  --stage-bg:
+    radial-gradient(92% 74% at 50% 0%, rgba(0, 128, 55, 0.10), transparent 62%),
+    #ECF2EC;
+  --tag-color: #008037;
+}
+
+.work-card--rivant {
+  --stage-bg:
+    radial-gradient(70% 60% at 50% 32%, rgba(255, 255, 255, 0.07), transparent 62%),
+    #171717;
+  --tag-color: #171717;
+}
+
+/* The screenshot was disappearing into the black stage — a
+   quiet border, no shadow/glow, is enough separation. */
+.work-card--rivant .work-card__shot {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.work-card--wojewodka {
+  --stage-bg:
+    radial-gradient(92% 74% at 50% 0%, rgba(147, 143, 106, 0.16), transparent 62%),
+    #F0EDE3;
+  /* Darkened from #938F6A (3.18:1, fails AA at this text size) to
+     #6E6A48 — the same legibility-darkened olive live-project.css
+     already uses for this project's own case-study page. 5.31:1. */
+  --tag-color: #6E6A48;
+}
+
+/* --- Body ---------------------------------------------------- */
+.work-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+}
+
+/* Brand name is a secondary trailing element — the descriptive
+   title carries the emphasis via the title's own weight/size;
+   this just steps the brand back with weight and colour. */
+.work-card__brand {
+  font-weight: var(--weight-regular);
+  color: var(--color-text-secondary);
+}
+
+.work-card__tags {
+  margin-top: var(--space-2);
+  color: var(--tag-color, var(--color-text-secondary));
+  font-weight: var(--weight-medium);
+}
+
+.work-card__tags .meta__item + .meta__item::before {
+  background: currentColor;
+  opacity: 0.55;
+}
+
+/* --- No hover motion, per the brief — focus mirrors it for
+   keyboard users, since that's accessibility, not decoration --- */
+.work-card:focus-visible {
+  outline: none;
+}
+
+.work-card:focus-visible .work-card__media {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}

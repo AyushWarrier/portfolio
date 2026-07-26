@@ -1,0 +1,48 @@
+/* =============================================================
+   HERO
+   A single editorial column. No portrait, no facts, no cards —
+   the whitespace is deliberate. Typography does the work.
+   ============================================================= */
+
+.hero {
+  /* Shorter than the original hero, but not cramped — the previous
+     pass compressed this too far. KLYMB still begins within the
+     first viewport; it just no longer touches the CTA row. */
+  padding-block: clamp(2rem, 6vh, 4.5rem) clamp(1.5rem, 4vh, 3rem);
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.hero__heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.hero__intro {
+  max-width: 30ch;
+  font-size: var(--text-xl);
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  text-wrap: balance;
+}
+
+/* The single highlighted word — the accent's one appearance in the
+   hero. Emphasised semantically, kept upright rather than italic. */
+.hero__accent {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
